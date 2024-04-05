@@ -1,0 +1,109 @@
+.mobile-menu {
+    display: none;
+    @media (max-width: $tablet) {
+        display: flex;
+        padding: toRem(25) toRem(30);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        z-index: 100;
+        border-radius: 60px 60px 0px 0px;
+        justify-content: space-between;
+        gap: toRem(150);
+        @media (max-width: $mobileSmall) {
+            padding: toRem(10) toRem(15);
+        }
+    }
+    &__left {
+        display: flex;
+        gap: toRem(30);
+        @media (max-width: $mobileSmall) {
+            gap: toRem(15);
+        }
+    }
+    &__main-btn-wrapper {
+        position: absolute;
+        left: 50%;
+        bottom: toRem(20);
+        transform: translate(-50%, 0);
+        width: toRem(140);
+        height: toRem(140);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        background-color: var(--bg-secondary);
+        @media (max-width: $mobileSmall) {
+            width: toRem(100);
+            height: toRem(100);
+        }
+    }
+    &__main-btn {
+        width: toRem(70);
+        height: toRem(70);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: toRem(32);
+        color: var(--text-secondary);
+        background: var(--linear-primary);
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        @media (any-hover: hover) {
+            &:hover {
+                .mobile-menu__button-icon {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            width: toRem(50);
+            height: toRem(50);
+            font-size: toRem(24);
+        }
+        &:active {
+            .mobile-menu__button-icon {
+                transform: scale(1.1);
+            }
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background: var(--linear-primary);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: mainMobileDecor 2s infinite linear;
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            animation-delay: 0.5s;
+        }
+    }
+    &__button-icon {
+        transition: transform 0.3s;
+    }
+    &__right {
+        display: flex;
+        gap: toRem(30);
+    }
+}
+@keyframes mainMobileDecor {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

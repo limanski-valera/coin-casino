@@ -1,0 +1,64 @@
+.benefits-list {
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 100, 50);
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        text-align: center;
+        @include adaptiveValue("margin-bottom", 50, 30);
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(20);
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+            gap: toRem(10);
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+        }
+    }
+    &__button {
+        align-self: center;
+    }
+}
+.benefits-item {
+    display: flex;
+    @include adaptiveValue("gap", 30, 15);
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 30px;
+    padding: toRem(10);
+    color: var(--text-secondary);
+    &__image {
+        @include adaptiveValue("width", 130, 102);
+        @include adaptiveValue("height", 113, 100);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #192230;
+        flex: 0 0 auto;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(5);
+    }
+    &__title {
+        @include adaptiveValue("font-size", 20, 15);
+        font-weight: 800;
+    }
+    &__text {
+        font-weight: 500;
+        line-height: 1.33;
+    }
+}

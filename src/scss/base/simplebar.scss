@@ -1,0 +1,18 @@
+.simplebar-track {
+    margin-bottom: toRem(90);
+    background-color: #1d2839;
+    border-radius: 30px;
+    @media (max-width: $tablet) {
+        display: none;
+    }
+    &.simplebar-vertical {
+        width: toRem(4) !important;
+    }
+}
+.simplebar-scrollbar {
+    background: var(--linear-primary);
+    border-radius: 30px;
+    .simplebar-vertical & {
+        width: toRem(4);
+    }
+}

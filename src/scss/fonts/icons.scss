@@ -1,0 +1,161 @@
+%ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+    &:before {
+        @extend %ic;
+        display: block;
+    }
+}
+
+._icon-simple-arrow-left:before {
+    content: "\e92e";
+}
+._icon-simple-arrow-right:before {
+    content: "\e92f";
+}
+._icon-referal:before {
+    content: "\e91d";
+}
+._icon-all-bets:before {
+    content: "\e900";
+}
+._icon-arrow-right:before {
+    content: "\e901";
+}
+._icon-arrow-top:before {
+    content: "\e902";
+}
+._icon-arrows-top:before {
+    content: "\e903";
+}
+._icon-ball:before {
+    content: "\e904";
+}
+._icon-chart:before {
+    content: "\e906";
+}
+._icon-cherrys:before {
+    content: "\e907";
+}
+._icon-chip:before {
+    content: "\e908";
+}
+._icon-clock:before {
+    content: "\e909";
+}
+._icon-close:before {
+    content: "\e90a";
+}
+._icon-comment:before {
+    content: "\e90b";
+}
+._icon-community:before {
+    content: "\e90c";
+}
+._icon-crown:before {
+    content: "\e90d";
+}
+._icon-daw-bottom:before {
+    content: "\e90e";
+}
+._icon-dice:before {
+    content: "\e90f";
+}
+._icon-dollar:before {
+    content: "\e910";
+}
+._icon-email:before {
+    content: "\e911";
+}
+._icon-eye-closed:before {
+    content: "\e912";
+}
+._icon-faq:before {
+    content: "\e913";
+}
+._icon-favorite:before {
+    content: "\e914";
+}
+._icon-gift-card:before {
+    content: "\e915";
+}
+._icon-helmet:before {
+    content: "\e916";
+}
+._icon-history:before {
+    content: "\e917";
+}
+._icon-info:before {
+    content: "\e918";
+}
+._icon-joystick:before {
+    content: "\e919";
+}
+._icon-new:before {
+    content: "\e91a";
+}
+._icon-play:before {
+    content: "\e91b";
+}
+._icon-present:before {
+    content: "\e91c";
+}
+._icon-rocket:before {
+    content: "\e91e";
+}
+._icon-scale:before {
+    content: "\e91f";
+}
+._icon-search-left:before {
+    content: "\e920";
+}
+._icon-search:before {
+    content: "\e921";
+}
+._icon-secondary-info:before {
+    content: "\e922";
+}
+._icon-services:before {
+    content: "\e923";
+}
+._icon-settings:before {
+    content: "\e924";
+}
+._icon-share-right:before {
+    content: "\e925";
+}
+._icon-share:before {
+    content: "\e926";
+}
+._icon-slider-arrow-left:before {
+    content: "\e927";
+}
+._icon-slider-arrow-right:before {
+    content: "\e928";
+}
+._icon-smile:before {
+    content: "\e929";
+}
+._icon-spades:before {
+    content: "\e92a";
+}
+._icon-success-daw:before {
+    content: "\e92b";
+}
+._icon-tournnaments:before {
+    content: "\e92c";
+}
+._icon-trash:before {
+    content: "\e92d";
+}
+._icon-facebook:before {
+    content: "\e905";
+}

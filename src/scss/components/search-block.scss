@@ -1,0 +1,151 @@
+.search-block {
+    &__title {
+        font-weight: 800;
+        @include adaptiveValue("font-size", 30, 25);
+        color: var(--text-secondary);
+        line-height: 1.4;
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+    &__input-wrapper {
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: toRem(14);
+            font-size: toRem(15);
+            transform: translate(0, -50%);
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+    &__input {
+        padding-left: toRem(39);
+    }
+}
+.search-results {
+    color: var(--text-secondary);
+    &__heading {
+        display: flex;
+        @include adaptiveValue("gap", 50, 14);
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: toRem(22);
+        }
+        @media (max-width: $mobileSmall) {
+            gap: toRem(10);
+        }
+    }
+    &__title {
+        @include adaptiveValue("font-size", 20, 15);
+        font-weight: 800;
+    }
+    &__value {
+        padding: toRem(10) toRem(15);
+        font-weight: 600;
+        background-color: var(--bg-secondary);
+        border-radius: 60px;
+        @include adaptiveValue("font-size", 15, 10);
+    }
+    &__remove-wrapper {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__remove {
+        font-weight: 600;
+        background-color: var(--bg-secondary);
+        border-radius: 60px;
+        display: flex;
+        gap: toRem(8);
+        align-items: center;
+        flex-direction: row-reverse;
+        transition: background-color 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #1e2a3c;
+            }
+        }
+        &::before {
+            font-size: toRem(12);
+        }
+
+        @media (min-width: $mobile) {
+            padding: toRem(10) toRem(15);
+        }
+        @media (max-width: $mobile) {
+            width: toRem(32);
+            height: toRem(32);
+            justify-content: center;
+            border-radius: 50%;
+        }
+    }
+    &__remove-text {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    &__list {
+        @media (min-width: $mobile) {
+            margin-right: toRem(-25);
+            padding-right: toRem(25);
+        }
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: toRem(10);
+        @media (max-width: toRem(1200)) {
+            grid-template-columns: repeat(7, 1fr);
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: $tablet) {
+            max-height: toRem(500);
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                z-index: 2;
+                pointer-events: none;
+                height: toRem(280);
+                background: linear-gradient(
+                    0deg,
+                    #0f1621 -11.59%,
+                    #0f1621 -0.17%,
+                    rgba(15, 22, 33, 0.64) 48.31%,
+                    rgba(15, 22, 33, 0) 95.33%
+                );
+                width: calc(100% - 20px);
+                @media (max-width: $tablet) {
+                    width: 100%;
+                }
+            }
+        }
+        .simplebar-content {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: toRem(10);
+            &::before {
+                display: none;
+            }
+            @media (max-width: toRem(1200)) {
+                grid-template-columns: repeat(7, 1fr);
+            }
+            @media (max-width: $tablet) {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .simplebar-track {
+            margin-bottom: toRem(0);
+        }
+    }
+}

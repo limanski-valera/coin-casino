@@ -1,0 +1,65 @@
+<header class="header">
+    <div class="header__container">
+        <div class="header__left">
+            <button
+                type="button"
+                class="menu__icon icon-menu"
+                data-da=".mobile-menu__left, 991.98, 0"
+            >
+                <span></span>
+            </button>
+            <a href="#" class="header__logo"><img src="@img/logo.svg" alt="" /></a>
+            <a href="#" class="header__bonus button button--violette"
+                ><span class="button__text">Бонуси</span>
+                <img src="@img/buttons/bonus.svg" alt="" />
+            </a>
+        </div>
+        <nav class="header__right">
+            <div class="header__cabinet">
+                <a href="login.html" class="header__login button button--yellow"
+                    ><span class="button__text">Увійти</span></a
+                >
+                <a href="registry.html" class="header__registry button"
+                    ><span class="button__text">Реєстрація</span>
+                    <img src="@img/buttons/present.svg" alt="" />
+                </a>
+            </div>
+            <div class="header__actives actives-header">
+                <a
+                    href="#"
+                    data-popup="#searching-popup"
+                    class="actives-header__button _icon-search"
+                    data-da=".mobile-menu__left, 991.98, 1"
+                ></a>
+                <a
+                    href="#"
+                    class="actives-header__button chat-button _icon-comment"
+                    data-da=".mobile-menu__right, 991.98, 1"
+                    ><span class="_count">3</span></a
+                >
+                <a
+                    href="#"
+                    data-popup="#languages-popup"
+                    class="actives-header__button actives-header__button--language _icon-daw-bottom"
+                    data-da=".mobile-menu__right, 991.98, 0"
+                >
+                    <img src="@img/flags/ua.png" alt="" />
+                </a>
+            </div>
+        </nav>
+    </div>
+    <nav class="mobile-menu">
+        <div class="mobile-menu__left"></div>
+        <div class="mobile-menu__main-btn-wrapper">
+            <a class="mobile-menu__main-btn">
+                <span class="mobile-menu__button-icon _icon-spades"></span>
+            </a>
+        </div>
+        <div class="mobile-menu__right"></div>
+    </nav>
+</header>
+@@include('./components/_service-button.htm',{})
+@@include('./components/popups/_searching-popup.htm',{})
+@@include('./components/_chat-window.htm',{})
+@@include('./components/popups/_languages-popup.htm',{})
+@@include('./_sidebar.htm',{})

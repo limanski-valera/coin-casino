@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="uk">
+    @@include('html/_head.htm',{ "title":"Казино" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main>
+                <div class="page">
+                    @@include('html/components/banners-list/_banners-list.htm',{})
+                    @@include('html/components/casino-categories/_casino-categories.htm',{})
+                </div>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>

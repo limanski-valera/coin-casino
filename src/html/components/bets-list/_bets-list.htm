@@ -1,0 +1,33 @@
+<div class="bets">
+    <div data-tabs class="bets__container">
+        <div class="bets__heading heading-bets">
+            <div class="heading-bets__left">
+                <h2 class="heading-bets__title title">Останні ставки</h2>
+                <nav data-tabs-titles class="tabs__navigation">
+                    <button type="button" class="tabs__title _tab-active _icon-spades">
+                        Сasino Bets
+                    </button>
+                    <button type="button" class="tabs__title _icon-ball">Sports Bets</button>
+                    <button type="button" class="tabs__title _icon-dollar">Staking Payouts</button>
+                    <button type="button" class="tabs__title _icon-chart">Futures</button>
+                </nav>
+            </div>
+            <div class="heading-bets__right">
+                <select name="filter" data-class-modif="form">
+                    <option value="1" selected>5</option>
+                    <option value="2">4</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div data-tabs-body class="bets__content tabs__content">
+            <div class="tabs__body">@@include('./_bets-table.htm',{})</div>
+            <div class="tabs__body">@@include('./_bets-table.htm',{})</div>
+            <div class="tabs__body">@@include('./_bets-table.htm',{})</div>
+            <div class="tabs__body">@@include('./_bets-table.htm',{})</div>
+        </div>
+        <button class="bets__button-more button">
+            <span class="button__text">Показати більше</span>
+        </button>
+    </div>
+</div>

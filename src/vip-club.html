@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="uk">
+    @@include('html/_head.htm',{ "title":"Нагороди та акції" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main>
+                <div class="page page-vip">
+                    <section class="banner">
+                        <div class="banner__container">
+                            <div class="banner__wrapper">
+                                <img src="@img/banners/03-bg.png" alt="" class="banner__bg" />
+                                <div class="banner__content">
+                                    <h2 class="banner__title">WELCOME TO VIP-CLUB Casino21UA</h2>
+                                    <div class="banner__text">
+                                        Станьте частиною VIP клубу для отримання ексклюзивних
+                                        бонусів
+                                    </div>
+                                </div>
+                                <div class="banner__image">
+                                    <img src="@img/banners/03.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    @@include('html/components/benefits-list/_benefits-list-vip.htm',{})
+                    <section class="page-vip__faq faq-page-vip">
+                        <div class="faq-page-vip__container">
+                            <h2 class="faq-page-vip__title title">Поширені запитання</h2>
+                            <nav data-tabs-titles class="tabs__navigation">
+                                <button type="button" class="tabs__title _tab-active">
+                                    Загальні
+                                </button>
+                                <button type="button" class="tabs__title">Привілеї</button>
+                                <button type="button" class="tabs__title">Vip-менеджери</button>
+                            </nav>
+                            <div data-spollers class="spollers simple-spollers">
+                                <details class="spollers__item">
+                                    <summary class="spollers__title">
+                                        Почему ВИП-программа Casino21UA является лучшей?
+                                    </summary>
+                                    <div class="spollers__body">Контент спойлера</div>
+                                </details>
+                                <details class="spollers__item">
+                                    <summary class="spollers__title">
+                                        Сколько сайт Casino21UA выплатил в качестве бонусов?
+                                    </summary>
+                                    <div class="spollers__body">Контент спойлера</div>
+                                </details>
+                                <details class="spollers__item">
+                                    <summary class="spollers__title">
+                                        Как я могу принять участие в еженедельном розыгрыше $75 000?
+                                    </summary>
+                                    <div class="spollers__body">Контент спойлера</div>
+                                </details>
+                                <details class="spollers__item">
+                                    <summary class="spollers__title">
+                                        Где я могу найти адрес канала Casino21UA в Telegram?
+                                    </summary>
+                                    <div class="spollers__body">
+                                        <div class="spollers__text">
+                                            <p>
+                                                Как только вы достигнете уровня "Бронза", вы можете
+                                                попросить службу поддержки подключить вас к каналу
+                                                Casino21UA VIP в Telegram.
+                                            </p>
+                                            <p>
+                                                Вы также можете найти дополнительную информацию по
+                                                данному вопросу, присоединившись к каналу Casino21UA
+                                                в Telegram
+                                            </p>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="levels-block">
+                        <div class="levels-block__container">
+                            <h2 class="levels-block__title title">
+                                Система рівнів <span class="_red">Vip-програми</span> Casino21UA
+                            </h2>
+                        </div>
+                        <div class="levels-block__content">
+                            <div class="levels-block__slider swiper">
+                                <div class="levels-block__wrapper swiper-wrapper">
+                                    <div class="levels-block__slide swiper-slide">
+                                        @@include('html/components/_levels-card.htm',{"image":"level-01.png","title":"Бронзовий
+                                        рівень","sum":"$10k"})
+                                    </div>
+                                    <div class="levels-block__slide swiper-slide">
+                                        @@include('html/components/_levels-card.htm',{"image":"level-02.png","title":"СРІБНИЙ
+                                        рівень","sum":"$50k - $100k"})
+                                    </div>
+                                    <div class="levels-block__slide swiper-slide">
+                                        @@include('html/components/_levels-card.htm',{"image":"level-03.png","title":"ЗОЛОТИЙ
+                                        рівень","sum":"$100k"})
+                                    </div>
+                                    <div class="levels-block__slide swiper-slide">
+                                        @@include('html/components/_levels-card.htm',{"image":"level-04.png","title":"ПЛАТИНОВИЙ
+                                        рівень","sum":"$250k - $1M"})
+                                    </div>
+                                    <div class="levels-block__slide swiper-slide">
+                                        @@include('html/components/_levels-card.htm',{"image":"level-01.png","title":"Бронзовий
+                                        рівень","sum":"$10k"})
+                                    </div>
+                                    <div class="levels-block__slide swiper-slide">
+                                        @@include('html/components/_levels-card.htm',{"image":"level-01.png","title":"Бронзовий
+                                        рівень","sum":"$10k"})
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="levels-block__buttons">
+                                <button
+                                    type="button"
+                                    class="swiper-button swiper-button-prev _icon-simple-arrow-left"
+                                ></button>
+                                <button
+                                    type="button"
+                                    class="swiper-button swiper-button-next _icon-simple-arrow-right"
+                                ></button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>

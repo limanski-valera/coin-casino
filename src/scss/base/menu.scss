@@ -1,0 +1,62 @@
+//Burger Icon
+.icon-menu {
+    display: block;
+    position: relative;
+    width: toRem(60);
+    height: toRem(60);
+    z-index: 5;
+    border-radius: 6px;
+    flex: 0 0 auto;
+    transition: background-color 0.3s;
+    @media (min-width: $tablet) {
+        background-color: #202b3a;
+        @media (any-hover: hover) {
+            cursor: pointer;
+            &:hover {
+                background-color: #283548;
+            }
+        }
+    }
+    span,
+    &::before,
+    &::after {
+        content: "";
+        transition: all 0.3s ease 0s;
+        right: 0;
+        position: absolute;
+        height: toRem(3);
+        background-color: var(--text-primary);
+        border-radius: 10px;
+        right: toRem(13);
+    }
+    &::before {
+        width: toRem(26);
+        top: toRem(20);
+    }
+    &::after {
+        width: toRem(20);
+        top: toRem(37);
+    }
+    span {
+        width: toRem(34);
+        top: calc(50%);
+        transform: translateY(-50%);
+    }
+    .menu-open & {
+        span {
+            width: 0;
+        }
+        &::before,
+        &::after {
+            top: 50%;
+            width: 50%;
+            right: toRem(15);
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+}
