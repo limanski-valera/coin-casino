@@ -778,6 +778,7 @@ body::after {
 @media (max-width: 47.99875em) {
   .popup__content {
     padding: 3.125rem 0.875rem;
+    border-radius: 30px;
   }
 }
 .popup-search .popup__content {
@@ -1083,7 +1084,7 @@ body::after {
 @media (max-width: 61.99875em) {
   .mobile-menu {
     display: flex;
-    padding: 1.5625rem 1.875rem;
+    padding: 0.9375rem 3.125rem;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -1097,7 +1098,8 @@ body::after {
 }
 @media (max-width: 61.99875em) and (max-width: 29.99875em) {
   .mobile-menu {
-    padding: 0.625rem 0.9375rem;
+    padding: 0.625rem 2.1875rem;
+    border-radius: 30px 30px 0 0;
   }
 }
 .mobile-menu__left {
@@ -1112,7 +1114,7 @@ body::after {
 .mobile-menu__main-btn-wrapper {
   position: absolute;
   left: 50%;
-  bottom: 1.25rem;
+  bottom: 0;
   transform: translate(-50%, 0);
   width: 8.75rem;
   height: 8.75rem;
@@ -2587,6 +2589,29 @@ body::after {
   }
 }
 
+@media (min-width: 100.125em) {
+  .page-casino {
+    padding-bottom: 6.25rem;
+  }
+}
+@media (min-width: 26.75em) and (max-width: 100.125em) {
+  @supports (padding-bottom: clamp( 3.125rem , 1.9857325383rem  +  4.2589437819vw , 6.25rem )) {
+    .page-casino {
+      padding-bottom: clamp( 3.125rem , 1.9857325383rem  +  4.2589437819vw , 6.25rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 3.125rem , 1.9857325383rem  +  4.2589437819vw , 6.25rem )) {
+    .page-casino {
+      padding-bottom: calc(3.125rem + 3.125 * (100vw - 26.75rem) / 73.375);
+    }
+  }
+}
+@media (max-width: 26.75em) {
+  .page-casino {
+    padding-bottom: 3.125rem;
+  }
+}
+
 ._red {
   background: var(--linear-primary);
   -webkit-background-clip: text;
@@ -3001,6 +3026,8 @@ body::after {
   overflow: hidden;
   position: relative;
   padding: 7.5rem 5.625rem;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 100.125em) {
   .banner__wrapper {
@@ -3066,6 +3093,28 @@ body::after {
 @media (max-width: 26.75em) {
   .banner__wrapper {
     padding-bottom: 5rem;
+  }
+}
+@media (min-width: 100.125em) {
+  .banner__wrapper {
+    min-height: 25rem;
+  }
+}
+@media (min-width: 26.75em) and (max-width: 100.125em) {
+  @supports (min-height: clamp( 13.125rem , 8.7957836457rem  +  16.1839863714vw , 25rem )) {
+    .banner__wrapper {
+      min-height: clamp( 13.125rem , 8.7957836457rem  +  16.1839863714vw , 25rem );
+    }
+  }
+  @supports not (min-height: clamp( 13.125rem , 8.7957836457rem  +  16.1839863714vw , 25rem )) {
+    .banner__wrapper {
+      min-height: calc(13.125rem + 11.875 * (100vw - 26.75rem) / 73.375);
+    }
+  }
+}
+@media (max-width: 26.75em) {
+  .banner__wrapper {
+    min-height: 13.125rem;
   }
 }
 @media (max-width: 47.99875em) {
@@ -3574,6 +3623,7 @@ body::after {
 .casino-categories__slider {
   border-radius: 24px;
   position: relative;
+  background-color: var(--bg-secondary);
 }
 .casino-categories__slider::after {
   content: "";
@@ -3582,10 +3632,17 @@ body::after {
   right: 0;
   width: 15.625rem;
   height: 6rem;
+  pointer-events: none;
   background: linear-gradient(270deg, #0f1621 28.24%, rgba(15, 22, 33, 0.82) 62.07%, rgba(15, 22, 33, 0) 100%);
 }
-.casino-categories__wrapper {
-  background-color: var(--bg-secondary);
+@media (max-width: 47.99875em) {
+  .casino-categories__slider::after {
+    width: 4.375rem;
+  }
+}
+.casino-categories--providers .casino-categories__slider {
+  border-radius: 0;
+  background-color: transparent;
 }
 .casino-category {
   width: 7.5rem;
@@ -3599,11 +3656,19 @@ body::after {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
+  transition: background-color 0.3s;
 }
 @media (any-hover: hover) {
-  .casino-category:hover::before {
-    opacity: 0.05;
+  .casino-category:hover {
+    background-color: #253041;
   }
+}
+.casino-categories--providers .casino-category {
+  width: 8.625rem;
+  height: 3.75rem;
+  border-radius: 8px;
+  border: 1px solid #202a3a;
+  padding: 0.3125rem;
 }
 .casino-category::before {
   content: "";
@@ -3636,11 +3701,18 @@ body::after {
 .swiper-slide-active .casino-category::after {
   opacity: 1;
 }
+.casino-categories--providers .casino-category::before, .casino-categories--providers .casino-category::after {
+  display: none;
+}
 .casino-category__image {
   width: 3rem;
   height: 3rem;
   position: relative;
   z-index: 3;
+}
+.casino-categories--providers .casino-category__image {
+  width: 100%;
+  height: 100%;
 }
 .casino-category__image img {
   width: 100%;
@@ -3653,6 +3725,34 @@ body::after {
   white-space: nowrap;
   position: relative;
   z-index: 3;
+}
+
+.games-collections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+@media (min-width: 100.125em) {
+  .games-collections:not(:last-child) {
+    margin-bottom: 6.25rem;
+  }
+}
+@media (min-width: 26.75em) and (max-width: 100.125em) {
+  @supports (margin-bottom: clamp( 3.125rem , 1.9857325383rem  +  4.2589437819vw , 6.25rem )) {
+    .games-collections:not(:last-child) {
+      margin-bottom: clamp( 3.125rem , 1.9857325383rem  +  4.2589437819vw , 6.25rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 3.125rem , 1.9857325383rem  +  4.2589437819vw , 6.25rem )) {
+    .games-collections:not(:last-child) {
+      margin-bottom: calc(3.125rem + 3.125 * (100vw - 26.75rem) / 73.375);
+    }
+  }
+}
+@media (max-width: 26.75em) {
+  .games-collections:not(:last-child) {
+    margin-bottom: 3.125rem;
+  }
 }
 
 .header {
@@ -4323,25 +4423,30 @@ body::after {
 }
 
 .sidebar {
-  padding: 6.25rem 0 0;
   position: fixed;
-  top: 0;
-  height: 100vh;
+  top: 6.25rem;
+  left: 0;
+  height: calc(100vh - 6.25rem);
   overflow-y: auto;
   -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
   width: 100%;
   pointer-events: none;
-  z-index: 50;
+  z-index: 100;
 }
 @media (max-width: 61.99875em) {
   .sidebar {
     left: -100%;
     transition: left 0.5s;
-    padding-bottom: 10.625rem;
   }
   .menu-open .sidebar {
     left: 0;
+  }
+}
+@media (max-width: 47.99875em) {
+  .sidebar {
+    top: 5rem;
+    height: calc(100vh - 5rem);
   }
 }
 .sidebar__actives {
@@ -4373,6 +4478,12 @@ body::after {
   border-radius: 30px;
   position: relative;
   pointer-events: all;
+  padding-bottom: 1.875rem;
+}
+@media (max-width: 61.99875em) {
+  .menu {
+    padding-bottom: 6.25rem;
+  }
 }
 .menu-webkit-scrollbar {
   width: 0;
@@ -4483,6 +4594,7 @@ body::after {
 
 .sub-menu {
   display: none;
+  pointer-events: all;
 }
 .menu-open ._opened .sub-menu {
   background-color: var(--bg-secondary);
@@ -4498,6 +4610,11 @@ body::after {
   overflow-y: auto;
   -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
+}
+@media (max-width: 61.99875em) {
+  .menu-open ._opened .sub-menu {
+    padding-bottom: 9.375rem;
+  }
 }
 .sub-menu::before {
   content: "";
@@ -4683,6 +4800,13 @@ body::after {
 .main-block__wrapper:not(:last-child) {
   margin-bottom: 1.875rem;
 }
+.main-block__slide {
+  pointer-events: none;
+}
+.main-block__slide.swiper-slide-active {
+  pointer-events: all;
+}
+
 @media (min-width: 100.125em) {
   .categories {
     margin-bottom: 6.25rem;
