@@ -4157,8 +4157,8 @@ body::after {
 }
 .header-wallet__dropdown {
   position: absolute;
-  top: calc(100% + 2px);
   left: 50%;
+  width: 15.3125rem;
   padding: 1.25rem;
   border-radius: 10px;
   background-color: #202a3a;
@@ -4171,6 +4171,20 @@ body::after {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0);
+}
+@media (min-width: 47.99875em) {
+  .header-wallet__dropdown {
+    top: calc(100% + 5px);
+  }
+}
+@media (max-width: 47.99875em) {
+  .header-wallet__dropdown {
+    bottom: calc(100% + 5px);
+    left: 0;
+  }
+  ._opened .header-wallet__dropdown {
+    transform: translate(0, 0);
+  }
 }
 
 .header {
@@ -6324,6 +6338,12 @@ body::after {
   width: calc(100% + 2.5rem);
   height: 0.0625rem;
   background-color: var(--text-primary);
+}
+@media (max-width: 47.99875em) {
+  .bet-row-card__rival:not(:last-child)::after {
+    left: -0.9375rem;
+    width: calc(100% + 0.9375rem);
+  }
 }
 .bet-row-card__logo-rival {
   width: 1.875rem;
