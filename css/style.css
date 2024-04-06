@@ -4146,13 +4146,29 @@ body::after {
     padding: 1.25rem 0.625rem;
   }
 }
+@media (max-width: 47.99875em) {
+  .header-wallet__dropdown-button {
+    font-size: 0.75rem;
+    padding: 0.625rem 0.3125rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .header-wallet__button .button__text {
+    padding: 0.625rem 1.25rem;
+  }
+}
 .header-wallet__value {
   color: var(--text-secondary);
   font-weight: 800;
 }
 @media (max-width: 100.125em) {
   .header-wallet__value {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .header-wallet__value {
+    font-size: 0.625rem;
   }
 }
 .header-wallet__dropdown {
@@ -4180,6 +4196,7 @@ body::after {
 @media (max-width: 47.99875em) {
   .header-wallet__dropdown {
     bottom: calc(100% + 5px);
+    width: 12.5rem;
     left: 0;
   }
   ._opened .header-wallet__dropdown {
