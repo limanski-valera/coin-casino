@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="uk">
+    @@include('html/_head.htm',{ "title":"Гра 2" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main>
+                <div class="page page-game">
+                    @@include('html/components/_game-window.htm',{})
+
+                    <!-- Start Bets List -->
+                    @@include('html/components/bets-list/_bets-list--game.htm',{})
+                    <!-- End Bets List -->
+                </div>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>

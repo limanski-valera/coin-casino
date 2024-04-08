@@ -2,7 +2,7 @@
     display: none;
     @media (max-width: $tablet) {
         display: flex;
-        padding: toRem(25) toRem(30);
+        padding: toRem(15) toRem(50);
         position: fixed;
         bottom: 0;
         left: 0;
@@ -13,7 +13,8 @@
         justify-content: space-between;
         gap: toRem(150);
         @media (max-width: $mobileSmall) {
-            padding: toRem(10) toRem(15);
+            padding: toRem(10) toRem(35);
+            border-radius: 30px 30px 0 0;
         }
     }
     &__left {
@@ -26,7 +27,7 @@
     &__main-btn-wrapper {
         position: absolute;
         left: 50%;
-        bottom: toRem(20);
+        bottom: 0;
         transform: translate(-50%, 0);
         width: toRem(140);
         height: toRem(140);

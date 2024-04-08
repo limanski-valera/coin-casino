@@ -1,0 +1,47 @@
+<section class="casino-categories">
+    <div class="casino-categories__container">
+        <div class="casino-categories__header">
+            <h2 class="casino-categories__title title">Казино</h2>
+            <div class="casino-categories__select-wrapper">
+                <select name="form[]" data-class-modif="form">
+                    <option value="1" selected>Всі провайдери</option>
+                    <option value="2">Перший</option>
+                    <option value="3">Другий</option>
+                    <option value="4">Третій</option>
+                </select>
+            </div>
+            <div class="casino-categories__buttons">
+                <button
+                    type="button"
+                    class="casino-categories-button-prev swiper-button _icon-slider-arrow-left"
+                ></button>
+                <button
+                    type="button"
+                    class="casino-categories-button-next swiper-button _icon-slider-arrow-right"
+                ></button>
+            </div>
+        </div>
+        <div class="casino-categories__slider swiper">
+            <div class="casino-categories__wrapper swiper-wrapper">
+                @@include('./_casino-category-slide.htm',{"title":"Лобі","image":"lobby.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Новинки","image":"news.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Aviator","image":"aviator.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Popular","image":"popular.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Bonus BUY","image":"bonus-buy.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Megaways","image":"megaways.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Live дилери","image":"live.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Table","image":"blackjack.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Egypt","image":"egypt.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Dragon","image":"dragon.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Myth","image":"myth.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Fantasy","image":"fantasy.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Fruits","image":"fruits.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Animals","image":"animal.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Asia","image":"asia.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Books","image":"asia.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Winter","image":"winter.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Recomend","image":"recomend.png"})
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,105 @@
+<header class="header">
+    <div class="header__container">
+        <div class="header__left">
+            <button
+                type="button"
+                class="menu__icon icon-menu"
+                data-da=".mobile-menu__left, 991.98, 0"
+            >
+                <span></span>
+            </button>
+            <a href="#" class="header__logo"
+                ><img width="256" height="38" src="@img/logo.svg" alt=""
+            /></a>
+            <a href="#" class="header__bonus button button--violette"
+                ><span class="button__text">Бонуси</span>
+                <img width="90" height="98" src="@img/buttons/bonus.svg" alt="" />
+            </a>
+        </div>
+        <nav class="header__right">
+            <div class="header__cabinet">
+                <div class="user-area">
+                    <a href="#" class="user-area__info">
+                        <div class="avatar">
+                            <img width="49" height="49" src="@img/users/06.png" alt="" />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="-1 -1 34 34"
+                                class="avatar__svg"
+                            >
+                                <circle
+                                    fill="none"
+                                    stroke
+                                    cx="16"
+                                    cy="16"
+                                    r="15.9155"
+                                    style="stroke-dashoffset: 50px; stroke-dasharray: 100 100"
+                                />
+                            </svg>
+                            <span class="avatar__counter">10</span>
+                        </div>
+                        <div class="user-area__body _icon-daw-bottom">
+                            <div class="user-area__content">
+                                <div class="user-area__name">Привіт Дарина!</div>
+                                <span class="user-area__level"
+                                    >Рівень <span class="_orange">10</span></span
+                                >
+                            </div>
+                        </div>
+                    </a>
+                    <div class="user-area__wallet header-wallet" data-da=".sidebar__menu, 767.98">
+                        <div class="header-wallet__main" data-dropdown-parent>
+                            <a
+                                href="#"
+                                class="header-wallet__dropdown-button _icon-daw-bottom"
+                                data-dropdown-button
+                            >
+                                <span class="header-wallet__value">0.00000000</span>
+                                <img width="19" height="19" src="@img/currencies/07.svg" alt="" />
+                            </a>
+                            <div class="header-wallet__dropdown" data-dropdown-content>Контент</div>
+                        </div>
+                        <button class="header-wallet__button button button--green">
+                            <span class="button__text">Гаманець</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__actives actives-header">
+                <a
+                    href="#"
+                    data-popup="#searching-popup"
+                    class="actives-header__button _icon-search"
+                    data-da=".mobile-menu__left, 991.98, 1"
+                ></a>
+                <a
+                    href="#"
+                    class="actives-header__button chat-button _icon-comment"
+                    data-da=".mobile-menu__right, 991.98, 1"
+                    ><span class="_count">3</span></a
+                >
+                <a
+                    href="#"
+                    data-popup="#languages-popup"
+                    class="actives-header__button actives-header__button--language _icon-daw-bottom"
+                    data-da=".mobile-menu__right, 991.98, 0"
+                >
+                    <img width="23" height="22" src="@img/flags/ua.png" alt="" />
+                </a>
+            </div>
+        </nav>
+    </div>
+    <nav class="mobile-menu">
+        <div class="mobile-menu__left"></div>
+        <div class="mobile-menu__main-btn-wrapper">
+            <a class="mobile-menu__main-btn">
+                <span class="mobile-menu__button-icon _icon-spades"></span>
+            </a>
+        </div>
+        <div class="mobile-menu__right"></div>
+    </nav>
+</header>
+@@include('./components/_service-button.htm',{})
+@@include('./components/popups/_searching-popup.htm',{})
+@@include('./components/_chat-window.htm',{})
+@@include('./components/popups/_languages-popup.htm',{}) @@include('./_sidebar.htm',{})

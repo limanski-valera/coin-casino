@@ -1,0 +1,448 @@
+.page-kind {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("padding-bottom", 100, 60);
+    .casino-categories {
+        margin-bottom: toRem(30);
+    }
+    &__slider-block {
+    }
+}
+.slider-block-kind {
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 100, 60);
+    }
+    &__container {
+    }
+    &__slider {
+        position: relative;
+        @media (min-width: $tablet) {
+            .swiper-pagination {
+                display: none;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: toRem(100);
+                right: 0;
+                top: 0;
+                z-index: 3;
+                pointer-events: none;
+                background: linear-gradient(
+                    270deg,
+                    #0f1621 28.24%,
+                    rgba(15, 22, 33, 0.82) 62.07%,
+                    rgba(15, 22, 33, 0) 100%
+                );
+            }
+        }
+        @media (max-width: $tablet) {
+            overflow: visible !important;
+        }
+    }
+    &__buttons {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: translate(0, -50%);
+        z-index: 5;
+        pointer-events: none;
+        .swiper-button {
+            width: toRem(40);
+            height: toRem(40);
+            pointer-events: all;
+        }
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+    &__wrapper {
+        @media (max-width: $tablet) {
+            margin-bottom: toRem(20);
+        }
+    }
+    &__slide {
+    }
+}
+.bet-card {
+    padding: toRem(20);
+    position: relative;
+    background-color: var(--bg-secondary);
+    border-radius: 30px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    @media (max-width: $mobile) {
+        padding: toRem(20) toRem(15);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 162.579281%; /* 769/473 */
+        height: 69.516729%; /* 187/269 */
+        border-radius: 30px;
+        background: linear-gradient(
+            181deg,
+            rgba(255, 33, 81, 0) -73%,
+            rgba(255, 0, 65, 0) 32.76%,
+            rgba(236, 0, 60, 0.22) 65.62%,
+            rgba(215, 0, 54, 0.44) 99.51%
+        );
+        filter: blur(25px);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    @media (any-hover: hover) {
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+    &__decor {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: toRem(232);
+        max-height: toRem(232);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(20);
+        align-items: center;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+        @media (max-width: $mobile) {
+            font-size: toRem(13);
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+        img {
+            width: toRem(18);
+            height: toRem(18);
+            object-fit: contain;
+        }
+    }
+    &__event {
+        display: flex;
+        align-items: center;
+        gap: toRem(5);
+    }
+    &__time {
+        display: flex;
+        align-items: center;
+        gap: toRem(5);
+    }
+    &__rivals {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(50);
+        position: relative;
+        z-index: 2;
+        @media (max-width: $mobile) {
+            gap: toRem(10);
+        }
+    }
+    &__rival {
+    }
+}
+.rival-bet-card {
+    display: flex;
+    flex-direction: column;
+    &__main {
+        border-radius: 30px;
+        background: rgba(32, 42, 58, 0.31);
+        padding: toRem(15) toRem(20);
+        display: flex;
+        flex-direction: column;
+        gap: toRem(15);
+        align-items: center;
+        flex: 1 1 auto;
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+        @media (max-width: $mobile) {
+            padding: toRem(15) toRem(5);
+        }
+        @media (any-hover: hover) {
+            &:hover .rival-bet-card__logo {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__logo {
+        width: toRem(63);
+        height: toRem(63);
+        border-radius: 50%;
+        transition: transform 0.3s;
+        overflow: hidden;
+        @media (max-width: $mobile) {
+            width: toRem(42);
+            height: toRem(42);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        color: var(--text-secondary);
+        font-weight: 800;
+        line-height: 1.33;
+        text-align: center;
+        @media (min-width: $mobile) {
+            min-height: toRem(32);
+        }
+        @media (max-width: $mobile) {
+            font-size: toRem(12);
+        }
+    }
+    &__bet-info {
+        border-radius: 10px;
+        background: #192230;
+        padding: 0 toRem(20);
+        height: toRem(40);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 800;
+        transition: transform 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.bet-spollers {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("gap", 100, 60);
+    }
+    &__item {
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-size: toRem(30);
+        cursor: pointer;
+        color: var(--text-secondary);
+        &::marker,
+        &::-webkit-details-marker {
+            display: none;
+        }
+        ._icon-daw-bottom {
+            display: inline-block;
+            margin-left: toRem(15);
+            font-size: toRem(14);
+            color: var(--text-primary);
+            transition: transform 0.3s;
+        }
+        &._spoller-active ._icon-daw-bottom {
+            transform: rotate(180deg);
+        }
+    }
+    &__image {
+        margin-right: toRem(15);
+        width: toRem(45);
+        height: toRem(45);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__body {
+        padding-top: toRem(20);
+    }
+}
+.bet-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: toRem(15);
+    @media (max-width: toRem(1350)) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.bet-row-card {
+    border-radius: 30px;
+    background: var(--bg-secondary);
+    padding: toRem(20);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(30);
+    position: relative;
+    @media (max-width: $mobile) {
+        font-size: toRem(13);
+        padding: toRem(20) toRem(15);
+    }
+    &__info {
+        font-weight: 500;
+        @media (min-width: toRem(1450)) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: toRem(1450)) {
+            display: flex;
+            justify-content: space-between;
+            gap: toRem(20);
+        }
+
+        img {
+            width: toRem(18);
+            height: toRem(18);
+            object-fit: contain;
+        }
+    }
+    &__event {
+        display: flex;
+        gap: toRem(5);
+    }
+    &__time {
+        display: flex;
+        gap: toRem(5);
+    }
+    &__content {
+    }
+    &__rival {
+        display: flex;
+        gap: toRem(10);
+        align-items: center;
+        &:not(:last-child) {
+            padding-bottom: toRem(10);
+            position: relative;
+            margin-bottom: toRem(10);
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: toRem(-20);
+                width: calc(100% + toRem(40));
+                height: toRem(1);
+                background-color: var(--text-primary);
+                @media (max-width: $mobile) {
+                    left: toRem(-15);
+                    width: calc(100% + toRem(15));
+                }
+            }
+        }
+    }
+    &__logo-rival {
+        width: toRem(30);
+        height: toRem(30);
+        border-radius: 50%;
+        overflow: hidden;
+        flex: 0 0 auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: $mobile) {
+            width: toRem(24);
+            height: toRem(24);
+        }
+    }
+    &__name-rival {
+        font-weight: 800;
+        line-height: 1.33;
+        color: var(--text-secondary);
+    }
+    &__footer {
+    }
+    &__description {
+        font-weight: 500;
+        margin-bottom: toRem(10);
+    }
+    &__actives {
+        display: flex;
+        gap: toRem(10);
+    }
+    &__bet {
+        flex: 1 1 auto;
+        background-color: #192230;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+        color: var(--text-secondary);
+        font-weight: 800;
+        padding: 0 toRem(20);
+        height: toRem(40);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #233044;
+            }
+        }
+        @media (max-width: $mobile) {
+            height: toRem(30);
+        }
+    }
+    &__more-bets-btn {
+        width: toRem(31);
+        height: toRem(40);
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #192230;
+        border-radius: 10px;
+        font-size: toRem(8);
+        transition: background-color 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #233044;
+            }
+        }
+        @media (max-width: $mobile) {
+            width: toRem(30);
+            height: toRem(30);
+        }
+    }
+    &__all-bets {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(15);
+        top: calc(100% + toRem(5));
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--text-primary);
+        padding: toRem(20);
+        border-radius: toRem(15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(5px, 5px);
+        transition: all 0.3s;
+        ._opened & {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+}
+._icon-daw-bottom {
+}

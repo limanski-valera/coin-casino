@@ -20,6 +20,10 @@
         position: relative;
         list-style: none;
         font-weight: 500;
+        &::marker,
+        &::-webkit-details-marker {
+            display: none;
+        }
         &:not(:last-child) {
             margin-bottom: toRem(20);
         }
@@ -34,10 +38,6 @@
             padding: toRem(15) toRem(30);
             margin: 0 toRem(-15);
             width: calc(100% + toRem(30));
-        }
-        &::marker,
-        &::-webkit-details-marker {
-            display: none;
         }
         .simple-spollers & {
             min-height: toRem(80);

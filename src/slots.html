@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="uk">
+    @@include('html/_head.htm',{ "title":"Слоти" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main>
+                <div class="page page-slots">
+                    @@include('html/components/casino-categories/_casino-categories-select.htm',{})
+
+                    <div class="games-collections">
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-02.png","title":"Покупка бонуса ігри"})
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-01.png","title":"Megaways ігри"})
+                        @@include('html/components/games/_games-all-block.htm',{})
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>

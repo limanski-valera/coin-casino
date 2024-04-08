@@ -5,9 +5,40 @@
         <div class="wrapper">
             @@include('html/_header.htm',{})
             <main>
-                <div class="page">
+                <div class="page page-casino">
+
                     @@include('html/components/banners-list/_banners-list.htm',{})
+
                     @@include('html/components/casino-categories/_casino-categories.htm',{})
+
+                    <div class="games-collections">
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-02.png","title":"Оригінальні ігри"})
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-01.png","title":"Топ ігри"})
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-03.png","title":"Fortune ігри"})
+                    </div>
+                 
+
+                     <!-- Start Payments -->
+                     @@include('html/components/_payments.htm')
+                     <!-- End Payments -->
+
+                     <div class="games-collections">
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-04.png","title":"Гарячі ігри"})
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-05.png","title":"Холодні ігри"})
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-06.png","title":"Хіт ігри"})
+                     </div>
+                  
+
+                    @@include('html/components/casino-categories/_casino-categories-provider.htm',{})
+
+                    <div class="games-collections">
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-07.png","title":"Рекомендуємо лайв ігри"})
+                        @@include('html/components/games/_games-slider.htm',{"image":"games-08.png","title":"Scratch Cards ігри"})
+                    </div>
+                    
+                    <!-- Start Bets List -->
+                    @@include('html/components/bets-list/_bets-list.htm',{})
+                    <!-- End Bets List -->
                 </div>
             </main>
             @@include('html/_footer.htm',{})

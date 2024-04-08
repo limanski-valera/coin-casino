@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -26,111 +26,18 @@ import "../../scss/base/swiper.scss";
 
 // Ініціалізація слайдерів
 function initSliders() {
-    // Список слайдерів
-    // Перевіряємо, чи є слайдер на сторінці
-    // if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
-    // 	// Створюємо слайдер
-    // 	new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
-    // 		// Підключаємо модулі слайдера
-    // 		// для конкретного випадку
-    // 		modules: [Navigation],
-    // 		observer: true,
-    // 		observeParents: true,
-    // 		slidesPerView: 1,
-    // 		spaceBetween: 0,
-    // 		//autoHeight: true,
-    // 		speed: 800,
-
-    // 		//touchRatio: 0,
-    // 		//simulateTouch: false,
-    // 		//loop: true,
-    // 		//preloadImages: false,
-    // 		//lazy: true,
-
-    // 		/*
-    // 		// Ефекти
-    // 		effect: 'fade',
-    // 		autoplay: {
-    // 			delay: 3000,
-    // 			disableOnInteraction: false,
-    // 		},
-    // 		*/
-
-    // 		// Пагінація
-    // 		/*
-    // 		pagination: {
-    // 			el: '.swiper-pagination',
-    // 			clickable: true,
-    // 		},
-    // 		*/
-
-    // 		// Скроллбар
-    // 		/*
-    // 		scrollbar: {
-    // 			el: '.swiper-scrollbar',
-    // 			draggable: true,
-    // 		},
-    // 		*/
-
-    // 		// Кнопки "вліво/вправо"
-    // 		navigation: {
-    // 			prevEl: '.swiper-button-prev',
-    // 			nextEl: '.swiper-button-next',
-    // 		},
-    // 		/*
-    // 		// Брейкпоінти
-    // 		breakpoints: {
-    // 			640: {
-    // 				slidesPerView: 1,
-    // 				spaceBetween: 0,
-    // 				autoHeight: true,
-    // 			},
-    // 			768: {
-    // 				slidesPerView: 2,
-    // 				spaceBetween: 20,
-    // 			},
-    // 			992: {
-    // 				slidesPerView: 3,
-    // 				spaceBetween: 20,
-    // 			},
-    // 			1268: {
-    // 				slidesPerView: 4,
-    // 				spaceBetween: 30,
-    // 			},
-    // 		},
-    // 		*/
-    // 		// Події
-    // 		on: {
-
-    // 		}
-    // 	});
-    // }
     if (document.querySelector(".main-block__slider")) {
         new Swiper(".main-block__slider", {
-            modules: [Pagination, Autoplay],
+            modules: [Pagination],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 20,
             speed: 800,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
+            autoHeight: true,
             pagination: {
                 el: ".main-block__slider .swiper-pagination",
                 clickable: true,
-            },
-            on: {
-                init() {
-                    this.el.addEventListener("mouseenter", () => {
-                        this.autoplay.stop();
-                    });
-
-                    this.el.addEventListener("mouseleave", () => {
-                        this.autoplay.start();
-                    });
-                },
             },
         });
     }
@@ -216,18 +123,54 @@ function initSliders() {
         });
     }
     if (document.querySelector(".casino-categories__slider")) {
-        new Swiper(".casino-categories__slider", {
-            modules: [Navigation],
+        const sliders = document.querySelectorAll(".casino-categories__slider");
+        sliders.forEach((slider) => {
+            const sliderWrapper = slider.closest(".casino-categories");
+            const buttonPrev = sliderWrapper.querySelector(".casino-categories-button-prev");
+            const buttonNext = sliderWrapper.querySelector(".casino-categories-button-next");
+
+            new Swiper(slider, {
+                modules: [Navigation],
+                observer: true,
+                observeParents: true,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                speed: 800,
+                navigation: {
+                    prevEl: buttonPrev,
+                    nextEl: buttonNext,
+                },
+                breakpoints: {},
+            });
+        });
+    }
+    if (document.querySelector(".slider-block-kind__slider")) {
+        new Swiper(".slider-block-kind__slider", {
+            modules: [Navigation, Pagination],
             observer: true,
             observeParents: true,
-            slidesPerView: "auto",
-            spaceBetween: 10,
+            slidesPerView: 3,
+            spaceBetween: 15,
             speed: 800,
-            navigation: {
-                prevEl: ".casino-categories-button-prev",
-                nextEl: ".casino-categories-button-next",
+            pagination: {
+                el: ".slider-block-kind__slider .swiper-pagination",
+                clickable: true,
             },
-            breakpoints: {},
+            navigation: {
+                prevEl: ".slider-block-kind__slider .swiper-button-prev",
+                nextEl: ".slider-block-kind__slider .swiper-button-next",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                992: {
+                    slidesPerView: 2,
+                },
+                1350: {
+                    slidesPerView: 3,
+                },
+            },
         });
     }
 }

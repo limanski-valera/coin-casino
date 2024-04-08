@@ -45,6 +45,9 @@
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    @media (max-width: $mobile) {
+        font-size: toRem(13);
+    }
     &::-webkit-scrollbar {
         width: 0;
         height: 0;
@@ -62,8 +65,17 @@
         min-height: toRem(70);
         align-items: center;
         min-width: toRem(890);
+        @media (max-width: $mobile) {
+            min-height: toRem(50);
+        }
+        .table--four & {
+            grid-template-columns: repeat(4, 1fr);
+        }
         @media (max-width: $tablet) {
             padding-right: toRem(40);
+        }
+        .table--four & {
+            min-width: toRem(550);
         }
     }
     &__label {
@@ -72,6 +84,7 @@
     &__items {
         position: relative;
         min-width: toRem(890);
+        padding-bottom: toRem(100);
         &::before {
             content: "";
             position: absolute;
@@ -95,6 +108,9 @@
             padding-right: toRem(24);
             max-height: toRem(640);
         }
+        .table--four & {
+            min-width: toRem(550);
+        }
     }
     &__item {
         padding-left: toRem(40);
@@ -112,6 +128,9 @@
     border-radius: 20px;
     min-height: toRem(80);
     align-items: center;
+    .table--four & {
+        grid-template-columns: repeat(4, 1fr);
+    }
     &:nth-child(even) {
         background-color: #1d2939;
     }

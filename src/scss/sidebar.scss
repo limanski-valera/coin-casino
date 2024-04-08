@@ -1,21 +1,25 @@
 .sidebar {
-    padding: toRem(100) 0 0;
     position: fixed;
-    top: 0;
-    height: 100vh;
+    top: toRem(100);
+    left: 0;
+    height: calc(100vh - toRem(100));
     overflow-y: auto;
     -ms-overflow-style: none; /* IE 10+ */
     scrollbar-width: none; /* Firefox */
     width: 100%;
     pointer-events: none;
-    z-index: 50;
+    z-index: 100;
     @media (max-width: $tablet) {
         left: -100%;
         transition: left 0.5s;
-        padding-bottom: toRem(170);
         .menu-open & {
             left: 0;
+            pointer-events: all;
         }
+    }
+    @media (max-width: $mobile) {
+        top: toRem(80);
+        height: calc(100vh - toRem(80));
     }
     &__menu {
     }
@@ -51,6 +55,10 @@
     border-radius: 30px;
     position: relative;
     pointer-events: all;
+    padding-bottom: toRem(30);
+    @media (max-width: $tablet) {
+        padding-bottom: toRem(100);
+    }
     &-webkit-scrollbar {
         width: 0;
     }
@@ -169,6 +177,7 @@
 // Sub-menu
 .sub-menu {
     display: none;
+    pointer-events: all;
     .menu-open ._opened & {
         background-color: var(--bg-secondary);
         padding: toRem(25) toRem(15);
@@ -183,6 +192,9 @@
         overflow-y: auto;
         -ms-overflow-style: none; /* IE 10+ */
         scrollbar-width: none; /* Firefox */
+        @media (max-width: $tablet) {
+            padding-bottom: toRem(150);
+        }
     }
     &::before {
         content: "";

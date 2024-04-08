@@ -2,7 +2,7 @@
     <div class="footer__container">
         <div data-spollers="767.98, max" class="footer__main">
             <div class="footer__main-info">
-                <a href="" class="footer__logo"><img src="@img/logo.svg" alt="" /></a>
+                <a href="" class="footer__logo"><img width="256" height="38" src="@img/logo.svg" alt="" /></a>
                 <div class="footer__text">
                     <p>
                         Цей вебсайт пропонує азартні ігри з фактором ризику. Щоб бути користувачем
@@ -19,7 +19,9 @@
                 <summary class="spollers__title spollers__title--only-mobile">
                     Популярна інформація
                 </summary>
-                <div class="spollers__body">@@include('./components/footer/navbar.htm',{})</div>
+                <div class="spollers__body">
+                    @@include('./components/footer/navbar.htm',{})
+                </div>
             </details>
             <details class="spollers__item">
                 <summary class="spollers__title">Звʼязатися з нами</summary>
@@ -44,16 +46,18 @@
             </details>
             <details class="spollers__item">
                 <summary class="spollers__title">Валюти, що приймаються</summary>
-                <div class="spollers__body">@@include('./components/footer/currencies.htm',{})</div>
+                <div class="spollers__body">
+                    @@include('./components/footer/currencies.htm',{})
+                </div>
             </details>
         </div>
         <div class="footer__secondary secondary-footer">
             <div class="secondary-footer__gaming">
                 <a href="#" class="secondary-footer__gaming-license">
-                    Gaming License <img src="@img/footer/check.svg" alt="" />
+                    Gaming License <img width="10" height="10" src="@img/footer/check.svg" alt="" />
                 </a>
                 <div class="secondary-footer__logo-gaming">
-                    <img src="@img/footer/gaming-logo.png" alt="" />
+                    <img width="132" height="43" data-src="@img/footer/gaming-logo.png" alt="" />
                 </div>
             </div>
             <div class="secondary-footer__small-text">
@@ -66,16 +70,16 @@
             <div class="secondary-footer__other-info">
                 <div class="secondary-footer__secondary-logos">
                     <div class="secondary-footer__secondary-logo">
-                        <img src="@img/footer/verified.png" alt="" />
+                        <img width="77" height="38" data-src="@img/footer/verified.png" alt="" />
                     </div>
                     <div class="secondary-footer__secondary-logo">
-                        <img src="@img/footer/itech-lab.png" alt="" />
+                        <img width="77" height="38" data-src="@img/footer/itech-lab.png" alt="" />
                     </div>
                     <div class="secondary-footer__secondary-logo">
-                        <img src="@img/footer/responsible.svg" alt="" />
+                        <img width="77" height="38" data-src="@img/footer/responsible.svg" alt="" />
                     </div>
                     <div class="secondary-footer__secondary-logo">
-                        <img src="@img/footer/plus-18.svg" alt="" />
+                        <img width="77" height="38" data-src="@img/footer/plus-18.svg" alt="" />
                     </div>
                 </div>
                 <div class="secondary-footer__reserved">©2024 COINSGAME ALL RIGHTS RESERVED</div>
@@ -84,3 +88,4 @@
         <a href="#" data-goto=".page" class="footer__go-top-btn _icon-arrows-top"></a>
     </div>
 </footer>
+@@include('./_preloader.htm',{})

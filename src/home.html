@@ -14,42 +14,11 @@
                     <!-- End Categories -->
 
                     <!-- Start Payments -->
-                    <section class="payments">
-                        <div class="payments__container">
-                            <h2 class="payments__title title">Preferred payment method</h2>
-                            <div class="payments__body">
-                                <ul class="payments__list">
-                                    <li class="payments__item">
-                                        <div class="payments__image">
-                                            <img src="@img/payments/payment-01.png" alt="" />
-                                        </div>
-                                    </li>
-                                    <li class="payments__item">
-                                        <div class="payments__image">
-                                            <img src="@img/payments/payment-02.png" alt="" />
-                                        </div>
-                                    </li>
-                                    <li class="payments__item">
-                                        <div class="payments__image">
-                                            <img src="@img/payments/payment-03.svg" alt="" />
-                                        </div>
-                                    </li>
-                                    <li class="payments__item">
-                                        <div class="payments__image">
-                                            <img src="@img/payments/payment-04.svg" alt="" />
-                                        </div>
-                                    </li>
-                                </ul>
-                                <a href="#" class="payments__button button button--middle"
-                                    ><div class="button__text">Make Deposit</div></a
-                                >
-                            </div>
-                        </div>
-                    </section>
+                    @@include('html/components/_payments.htm')
                     <!-- End Payments -->
 
                     <!-- Start Best Games -->
-                    @@include('html/components/games/_games-slider.htm',{})
+                    @@include('html/components/games/_games-slider.htm',{"image":"games-01.png","title":"Best ігри"})
                     <!-- End Best Games -->
 
                     <!-- Start Bets List -->
@@ -63,6 +32,7 @@
             </main>
             @@include('html/_footer.htm',{})
         </div>
+
         @@include('html/_js.htm',{})
     </body>
 </html>

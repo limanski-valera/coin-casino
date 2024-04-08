@@ -63,6 +63,7 @@ body::after {
         }
         @media (max-width: $mobile) {
             padding: toRem(50) toRem(14);
+            border-radius: 30px;
         }
         .popup-search & {
             position: relative;

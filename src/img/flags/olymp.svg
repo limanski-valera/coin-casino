@@ -1,0 +1,21 @@
+<svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="GRC 1" clip-path="url(#clip0_420_3454)">
+<g id="gr">
+<g id="Group">
+<path id="Oval" d="M31.5 63C48.897 63 63 48.897 63 31.5C63 14.103 48.897 0 31.5 0C14.103 0 0 14.103 0 31.5C0 48.897 14.103 63 31.5 63Z" fill="#F0F0F0"/>
+<g id="Group_2">
+<path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M31.5 23.2826H61.9148C61.125 20.3524 59.9246 17.5911 58.3766 15.0652H31.5V23.2826Z" fill="#338AF3"/>
+<path id="Path_2" fill-rule="evenodd" clip-rule="evenodd" d="M11.8933 56.1523H51.1099C53.9846 53.8626 56.45 51.0815 58.3781 47.9348H4.625C6.55327 51.0814 9.01863 53.8626 11.8933 56.1523Z" fill="#338AF3"/>
+<path id="Path_3" fill-rule="evenodd" clip-rule="evenodd" d="M10.9581 7.62134C8.48166 9.75386 6.34077 12.2651 4.625 15.0652H10.9581V7.62134Z" fill="#338AF3"/>
+<path id="Path_4" fill-rule="evenodd" clip-rule="evenodd" d="M31.5 31.4999C31.5 28.2913 31.5 25.6061 31.5 23.2825H19.1739V31.4999H10.9565V23.2825H1.08515C0.378984 25.9026 0 28.6567 0 31.4999C0 34.3432 0.378984 37.0972 1.08515 39.7173H61.915C62.621 37.0972 63 34.3432 63 31.4999H31.5Z" fill="#338AF3"/>
+<path id="Path_5" fill-rule="evenodd" clip-rule="evenodd" d="M31.5019 0C27.1277 0 22.9619 0.892459 19.1758 2.50376V15.0652H31.5019C31.5019 12.1968 31.5019 9.75712 31.5019 6.8478H51.1103C45.7293 2.56233 38.9153 0 31.5019 0Z" fill="#338AF3"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_420_3454">
+<rect width="63" height="63" fill="white"/>
+</clipPath>
+</defs>
+</svg>

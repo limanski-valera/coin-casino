@@ -24,8 +24,22 @@
 .page-free-box {
     @include adaptiveValue("padding-bottom", 100, 60);
 }
+.page-casino {
+    @include adaptiveValue("padding-bottom", 100, 50);
+}
+.page-slots {
+    @include adaptiveValue("padding-bottom", 100, 50);
+}
+.page-game {
+    @include adaptiveValue("padding-bottom", 100, 50);
+}
 ._red {
     background: var(--linear-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+._orange {
+    background: var(--linear-secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -56,7 +70,7 @@
         font-size: toRem(35);
         color: var(--text-secondary);
         position: fixed;
-        top: toRem(110);
+        top: toRem(220);
         right: toRem(20);
         z-index: 100;
         &::before,
@@ -116,46 +130,37 @@
 }
 //========================================================================================================================================================
 .card-game {
-    height: toRem(229);
-    padding: toRem(10) toRem(10) toRem(25);
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
     display: block;
-    color: var(--text-secondary);
-    min-width: toRem(170);
     width: 100%;
-    &::before {
-        content: "";
-        position: absolute;
-        border-radius: 15px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(22, 31, 44, 0.78);
-        backdrop-filter: blur(10px);
-        z-index: 2;
-        transition: opacity 0.3s;
-        opacity: 0;
-    }
     &--small {
-        min-width: toRem(116);
-        height: auto;
-        padding-bottom: 133.62069%; /* 155/116 */
+        position: relative;
+        padding-bottom: 133.72093%; /* 230/172 */
     }
-    @media (any-hover: hover) {
-        &:hover::before {
-            opacity: 1;
+    &__wrapper {
+        padding-bottom: 133.72093%; /* 230/172 */
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        color: var(--text-secondary);
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 15px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(22, 31, 44, 0.78);
+            backdrop-filter: blur(10px);
+            z-index: 2;
+            transition: opacity 0.3s;
+            opacity: 0;
         }
-        &--small:hover::before {
-            opacity: 0.5;
+        @media (any-hover: hover) {
+            &:hover::before {
+                opacity: 1;
+            }
         }
-    }
-    @media (max-width: $mobile) {
-        height: auto;
-        padding-bottom: 133.62069%; /* 155/116 */
-        min-width: toRem(103);
     }
     &__img {
         position: absolute;
@@ -169,6 +174,7 @@
         position: absolute;
         top: toRem(10);
         left: toRem(10);
+        max-width: calc(100% - toRem(20));
         padding: toRem(9) toRem(12);
         border-radius: 60px;
         background: linear-gradient(180deg, #ff2151 2.74%, #ff0041 47.4%, #d70036 100%);
@@ -189,12 +195,8 @@
         @media (max-width: $mobile) {
             display: none;
         }
-        .card-game--small & {
-            display: none;
-        }
     }
     &__content {
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -202,8 +204,12 @@
         gap: toRem(30);
         opacity: 0;
         transform: translateY(10px);
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         z-index: 3;
+        padding: toRem(25) toRem(10);
         transition:
             opacity 0.3s,
             transform 0.3s;
@@ -214,9 +220,6 @@
             }
         }
         @media (max-width: $mobile) {
-            display: none;
-        }
-        .card-game--small & {
             display: none;
         }
     }
@@ -263,6 +266,21 @@
 //========================================================================================================================================================
 .games {
     &__container {
+        display: flex;
+        flex-direction: column;
+        .button {
+            align-self: center;
+        }
+    }
+    &__main-wrapper {
+        padding: toRem(20) toRem(40) toRem(40);
+        background-color: var(--bg-secondary);
+        border-radius: 60px;
+        margin-bottom: toRem(50);
+        @media (max-width: $mobile) {
+            border-radius: 30px;
+            padding: toRem(13) toRem(20);
+        }
     }
     &__slider {
         padding: toRem(20) toRem(40) toRem(40);
@@ -349,6 +367,24 @@
     }
     &__slide {
     }
+    &__cards-list {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: toRem(15);
+        @media (max-width: $pc) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @media (max-width: toRem(1200)) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        @media (max-width: toRem(659)) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: toRem(549)) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: toRem(7);
+        }
+    }
 }
 //========================================================================================================================================================
 .banner {
@@ -363,9 +399,12 @@
         overflow: hidden;
         position: relative;
         padding: toRem(120) toRem(90);
+        display: flex;
+        align-items: center;
         @include adaptiveValue("padding-left", 90, 20);
         @include adaptiveValue("padding-top", 120, 80);
         @include adaptiveValue("padding-bottom", 120, 80);
+        @include adaptiveValue("min-height", 400, 210);
         @media (max-width: $mobile) {
             border-radius: 30px;
         }
@@ -753,13 +792,19 @@
     }
     &__header {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        gap: toRem(20);
+        align-items: center;
+        position: relative;
+        z-index: 100;
         &:not(:last-child) {
             margin-bottom: toRem(20);
         }
     }
     &__title {
+        flex: 1 1 auto;
+        @media (min-width: $tablet) {
+            align-self: flex-start;
+        }
     }
     &__buttons {
         display: flex;
@@ -772,6 +817,7 @@
     &__slider {
         border-radius: 24px;
         position: relative;
+        background-color: var(--bg-secondary);
         &::after {
             content: "";
             position: absolute;
@@ -779,16 +825,23 @@
             right: 0;
             width: toRem(250);
             height: toRem(96);
+            pointer-events: none;
             background: linear-gradient(
                 270deg,
                 #0f1621 28.24%,
                 rgba(15, 22, 33, 0.82) 62.07%,
                 rgba(15, 22, 33, 0) 100%
             );
+            @media (max-width: $mobile) {
+                width: toRem(70);
+            }
+        }
+        .casino-categories--providers & {
+            border-radius: 0;
+            background-color: transparent;
         }
     }
     &__wrapper {
-        background-color: var(--bg-secondary);
     }
     &__slide {
     }
@@ -805,12 +858,18 @@
     position: relative;
     border-radius: 24px;
     overflow: hidden;
+    transition: background-color 0.3s;
     @media (any-hover: hover) {
         &:hover {
-            &::before {
-                opacity: 0.05;
-            }
+            background-color: #253041;
         }
+    }
+    .casino-categories--providers & {
+        width: toRem(138);
+        height: toRem(60);
+        border-radius: 8px;
+        border: 1px solid #202a3a;
+        padding: toRem(5);
     }
     &::before {
         content: "";
@@ -843,11 +902,21 @@
             opacity: 1;
         }
     }
+    &::before,
+    &::after {
+        .casino-categories--providers & {
+            display: none;
+        }
+    }
     &__image {
         width: toRem(48);
         height: toRem(48);
         position: relative;
         z-index: 3;
+        .casino-categories--providers & {
+            width: 100%;
+            height: 100%;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -860,5 +929,140 @@
         white-space: nowrap;
         position: relative;
         z-index: 3;
+    }
+}
+.games-collections {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(30);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 100, 50);
+    }
+}
+//========================================================================================================================================================
+.user-area {
+    display: flex;
+    gap: toRem(20);
+    align-items: center;
+    @media (max-width: $pc) {
+        gap: toRem(10);
+    }
+    .avatar {
+        flex: 0 0 auto;
+    }
+    &__info {
+        gap: toRem(10);
+        display: flex;
+        align-items: center;
+    }
+    &__body {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: toRem(5);
+        &::before {
+            font-size: toRem(8);
+            margin-top: toRem(3);
+        }
+    }
+    &__content {
+        font-size: toRem(13);
+    }
+    &__name {
+        font-weight: 800;
+        margin-bottom: toRem(5);
+        color: var(--text-secondary);
+    }
+    &__level {
+        font-weight: 500;
+    }
+    &__wallet {
+    }
+}
+.header-wallet {
+    border-radius: 9px;
+    background: #202a3a;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $mobile) {
+        margin: 0 toRem(15);
+    }
+    &__main {
+        position: relative;
+    }
+    &__dropdown-button {
+        padding: toRem(20);
+        display: flex;
+        align-items: center;
+        gap: toRem(5);
+        flex-direction: row-reverse;
+        &::before {
+            font-size: toRem(8);
+            transition: transform 0.3s;
+        }
+        ._opened &::before {
+            transform: rotate(180deg);
+        }
+        img {
+            width: toRem(19);
+            height: toRem(19);
+            flex: 0 0 auto;
+        }
+        @media (max-width: $pc) {
+            padding: toRem(20) toRem(10);
+        }
+        @media (max-width: $mobile) {
+            font-size: toRem(12);
+            padding: toRem(10) toRem(5);
+        }
+    }
+    &__button {
+        @media (max-width: $mobile) {
+            .button__text {
+                padding: toRem(10) toRem(20);
+            }
+        }
+    }
+    &__value {
+        color: var(--text-secondary);
+        font-weight: 800;
+        @media (max-width: $pc) {
+            font-size: toRem(12);
+        }
+        @media (max-width:$mobile){
+            font-size: toRem(10);
+        }
+    }
+    &__dropdown {
+        position: absolute;
+        left: 50%;
+        width: toRem(245);
+        padding: toRem(20);
+        border-radius: 10px;
+        background-color: #202a3a;
+        transition:
+            opacity 0.3s,
+            visibility 0.3s,
+            transform 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, 10px);
+        ._opened & {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+        }
+        @media (min-width: $mobile) {
+            top: calc(100% + 5px);
+        }
+        @media (max-width: $mobile) {
+            bottom: calc(100% + 5px);
+            width: toRem(200);
+            left: 0;
+            ._opened & {
+                transform: translate(0, 0);
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@
     // .select__body
     &__body {
         position: relative;
+        z-index: 2;
     }
     // .select__title
     &__title {
@@ -26,6 +27,10 @@
         padding: 0 toRem(15);
         gap: toRem(5);
         font-weight: 800;
+        border: 1px solid transparent;
+        ._select-open & {
+            border-color: var(--text-primary);
+        }
         &:after {
             content: "\e90e";
             font-family: "icons";
@@ -56,6 +61,24 @@
                 color: var(--text-primary);
             }
         }
+        .casino-categories__select-wrapper & {
+            width: toRem(185);
+            height: toRem(60);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-weight: 800;
+            gap: toRem(20);
+            &::after {
+                color: var(--text-primary);
+            }
+            @media (max-width: $mobile) {
+                width: toRem(134);
+                height: toRem(30);
+                padding: 0 toRem(12) 0 toRem(12);
+                gap: toRem(5);
+                font-size: toRem(12);
+            }
+        }
     }
     // .select__content
     &__content {
@@ -83,6 +106,7 @@
         overflow: hidden;
         left: 0;
         background-color: var(--bg-secondary);
+        border: 1px solid var(--text-primary);
     }
     // .select__scroll
     &__scroll {
