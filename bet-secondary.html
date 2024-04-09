@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Гра 2</title>
+	<title>Ставка</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -1395,1082 +1395,403 @@
 
 
 		<main>
-			<div class="page page-game">
-				<div class="game-window">
-					<div class="game-window__container">
-						<div class="game-window__content">
-							<header class="game-window__header">
-								<a href="#" class="game-window__button button-game-window button">
-									<span class="button-game-window__icon _icon-simple-arrow-left"></span>
-									<span class="button-game-window__text">Merge up</span>
-								</a>
-								<div class="game-window__active">
-									<div class="game-window__demo demo-game-window">
-										<input type="checkbox" id="demo" name="demo" class="demo-game-window__input" checked />
-										<label class="demo-game-window__label" for="demo">
-											<span class="demo-game-window__text">Демогра</span>
-											<span class="demo-game-window__toggle"></span></label>
-									</div>
-									<button class="game-window__icon _icon-favorite"></button>
-									<button class="game-window__icon _icon-scale"></button>
+			<div class="page page-bet">
+				<section class="casino-categories">
+					<div class="casino-categories__container">
+						<div class="casino-categories__header">
+							<h2 class="casino-categories__title title">Казино</h2>
+							<div class="casino-categories__select-wrapper">
+								<select name="form[]" data-class-modif="form">
+									<option value="1" selected>Всі провайдери</option>
+									<option value="2">Перший</option>
+									<option value="3">Другий</option>
+									<option value="4">Третій</option>
+								</select>
+							</div>
+							<div class="casino-categories__buttons">
+								<button type="button" class="casino-categories-button-prev swiper-button _icon-slider-arrow-left"></button>
+								<button type="button" class="casino-categories-button-next swiper-button _icon-slider-arrow-right"></button>
+							</div>
+						</div>
+						<div class="casino-categories__slider swiper">
+							<div class="casino-categories__wrapper swiper-wrapper">
+								<div class="casino-categories__slide swiper-slide">
+									<a href="#" class="casino-category">
+										<div class="casino-category__image">
+											<picture><source data-srcset="img/menu-icons/lobby.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="48" height="48" data-src="img/menu-icons/lobby.png" alt="" /></picture>
+										</div>
+										<h4 class="casino-category__title">Лобі</h4>
+									</a>
 								</div>
-								<button class="game-window__icon _icon-close"></button>
+
+								<div class="casino-categories__slide swiper-slide">
+									<a href="#" class="casino-category">
+										<div class="casino-category__image">
+											<picture><source data-srcset="img/menu-icons/news.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="48" height="48" data-src="img/menu-icons/news.png" alt="" /></picture>
+										</div>
+										<h4 class="casino-category__title">Новинки</h4>
+									</a>
+								</div>
+
+								<div class="casino-categories__slide swiper-slide">
+									<a href="#" class="casino-category">
+										<div class="casino-category__image">
+											<picture><source data-srcset="img/menu-icons/aviator.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="48" height="48" data-src="img/menu-icons/aviator.png" alt="" /></picture>
+										</div>
+										<h4 class="casino-category__title">Aviator</h4>
+									</a>
+								</div>
+
+								<div class="casino-categories__slide swiper-slide">
+									<a href="#" class="casino-category">
+										<div class="casino-category__image">
+											<picture><source data-srcset="img/menu-icons/popular.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="48" height="48" data-src="img/menu-icons/popular.png" alt="" /></picture>
+										</div>
+										<h4 class="casino-category__title">Popular</h4>
+									</a>
+								</div>
+
+								<div class="casino-categories__slide swiper-slide">
+									<a href="#" class="casino-category">
+										<div class="casino-category__image">
+											<picture><source data-srcset="img/menu-icons/bonus-buy.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="48" height="48" data-src="img/menu-icons/bonus-buy.png" alt="" /></picture>
+										</div>
+										<h4 class="casino-category__title">Bonus BUY</h4>
+									</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<div class="bet">
+					<div class="bet__container">
+						<div class="bet__window window-bet">
+							<header class="window-bet__header">
+								<span class="window-bet__title">COMBO<span class="window-bet__title-count">2</span></span>
+								<button class="window-bet__close-btn _icon-close"></button>
+								<span class="window-bet__title">My bets</span>
 							</header>
-							<div class="game-window__body">
-								<img width="220" height="159" class="game-window__body-bg" src="img/controller.svg" alt="" />
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<!-- Start Bets List -->
-				<div class="bets">
-					<div data-tabs class="bets__container">
-						<div class="bets__heading heading-bets">
-							<div class="heading-bets__left">
-								<h2 class="heading-bets__title title">Останні ставки</h2>
-								<nav data-tabs-titles class="tabs__navigation">
-									<button type="button" class="tabs__title _tab-active _icon-spades">Сasino Bets</button>
-									<button type="button" class="tabs__title _icon-ball">Sports Bets</button>
-									<button type="button" class="tabs__title _icon-dollar">Staking Payouts</button>
-									<button type="button" class="tabs__title _icon-chart">Futures</button>
+							<div data-tabs class="window-bet__tabs">
+								<nav data-tabs-titles class="window-bet__navigation">
+									<button type="button" class="window-bet__part-title _tab-active">SINGLES</button>
+									<button type="button" class="window-bet__part-title">COMBO</button>
+									<button type="button" class="window-bet__part-title">SYSTEM</button>
 								</nav>
-							</div>
-						</div>
-						<div data-tabs-body class="bets__content tabs__content">
-							<div class="tabs__body">
-								<div class="table table--four">
-									<header class="table__head">
-										<div class="table__label">ГРАВЕЦЬ</div>
-										<div class="table__label">ВИПЛАТА</div>
-										<div class="table__label">СУМА</div>
-										<div class="table__label">ПРИБУТОК</div>
-									</header>
-									<ul class="table__items" data-simplebar>
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<span class="bets-item__text">Беттинг</span>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-									</ul>
-								</div>
-							</div>
-							<div class="tabs__body">
-								<div class="table">
-									<header class="table__head">
-										<div class="table__label">GAME</div>
-										<div class="table__label">TIME</div>
-										<div class="table__label">USER</div>
-										<div class="table__label">BET AMOUNT</div>
-										<div class="table__label">MULTIPLIER</div>
-										<div class="table__label">PAYOUT</div>
-									</header>
-									<ul class="table__items" data-simplebar>
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-									</ul>
-								</div>
-							</div>
-							<div class="tabs__body">
-								<div class="table">
-									<header class="table__head">
-										<div class="table__label">GAME</div>
-										<div class="table__label">TIME</div>
-										<div class="table__label">USER</div>
-										<div class="table__label">BET AMOUNT</div>
-										<div class="table__label">MULTIPLIER</div>
-										<div class="table__label">PAYOUT</div>
-									</header>
-									<ul class="table__items" data-simplebar>
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-									</ul>
-								</div>
-							</div>
-							<div class="tabs__body">
-								<div class="table">
-									<header class="table__head">
-										<div class="table__label">GAME</div>
-										<div class="table__label">TIME</div>
-										<div class="table__label">USER</div>
-										<div class="table__label">BET AMOUNT</div>
-										<div class="table__label">MULTIPLIER</div>
-										<div class="table__label">PAYOUT</div>
-									</header>
-									<ul class="table__items" data-simplebar>
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-										<li class="table__item bets-item">
-											<span class="bets-item__game _icon-dice">Dice</span>
-											<span class="bets-item__time _icon-time">11:40:06 AM</span>
-											<div class="bets-item__user">
-												<div class="bets-item__user-image">
-													<picture><source data-srcset="img/users/user-01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  width="27" height="27" data-src="img/users/user-01.png" alt="" /></picture>
-												</div>
-												<span class="bets-item__user-login">LUCKY544</span>
-											</div>
-											<div class="bets-item__amount">
-												<div class="bets-item__amount-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__amount-tariff">0.00236602</span>
-											</div>
-											<span class="bets-item__multiplier">
-												<span class="bets-item__multiplier-value">х1.00</span>
-											</span>
-											<div class="bets-item__payout">
-												<div class="bets-item__payout-image">
-													<img width="25" height="25" src="img/currencies/30.svg" alt="" class="" />
-												</div>
-												<span class="bets-item__payout-tariff">0.00236532</span>
-											</div>
-										</li>
-
-									</ul>
+								<div data-tabs-body class="window-bet__content">
+									<div class="window-bet__body">
+										<div class="window-bet__placeholder">
+											<img src="img/bet-placeholder.svg" alt="" class="window-bet__placeholder-image" />
+											<div class="window-bet__placeholder-text">No bets history plased here</div>
+										</div>
+									</div>
+									<div class="window-bet__body">
+										<div class="window-bet__bet">
+											<div class="window-bet__bet-info">
+												<div class="window-bet__bet-title">Тотал очок | Меньше (223)</div>
+												<div class="window-bet__bet-rivals">Anadolu Efes SK — BC Olympiakos Piraeus</div>
+											</div>
+											<span class="window-bet__bet-coefficient">1.95</span>
+											<button class="window-bet__bet-remove-btn _icon-close"></button>
+										</div>
+										<div class="window-bet__bet">
+											<div class="window-bet__bet-info">
+												<div class="window-bet__bet-title">Фора очок | Anadolu Efes SK (-13)</div>
+												<div class="window-bet__bet-rivals">Anadolu Efes SK — BC Olympiakos Piraeus</div>
+											</div>
+											<span class="window-bet__bet-coefficient">1.95</span>
+											<button class="window-bet__bet-remove-btn _icon-close"></button>
+										</div>
+										<div class="window-bet__options">
+											<div class="window-bet__option">
+												<input type="radio" id="b1" name="stake" value="150" class="window-bet__option-input" />
+												<label for="b1" class="window-bet__option-label">150</label>
+											</div>
+											<div class="window-bet__option">
+												<input type="radio" id="b2" name="stake" value="600" class="window-bet__option-input" />
+												<label for="b2" class="window-bet__option-label">600</label>
+											</div>
+											<div class="window-bet__option">
+												<input type="radio" id="b3" name="stake" value="1500" class="window-bet__option-input" />
+												<label for="b3" class="window-bet__option-label">1500</label>
+											</div>
+											<div class="window-bet__option">
+												<input type="radio" id="b4" name="stake" value="3000" class="window-bet__option-input" />
+												<label for="b4" class="window-bet__option-label">3000</label>
+											</div>
+										</div>
+										<div class="window-bet__text">Total stake</div>
+										<div class="window-bet__text">Potential win</div>
+										<div class="window-bet__actives">
+											<button class="window-bet__button button">
+												<span class="button__text">Sign in & Place Bet</span>
+											</button>
+											<button class="window-bet__delete-button _icon-trash"></button>
+										</div>
+										<button class="window-bet__share-btn _icon-share">Share bet</button>
+									</div>
+									<div class="window-bet__body">
+										<div class="window-bet__placeholder">
+											<img src="img/bet-placeholder.svg" alt="" class="window-bet__placeholder-image" />
+											<div class="window-bet__placeholder-text">No bets history plased here</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<button class="bets__button-more button">
-							<span class="button__text">Показати більше</span>
-						</button>
+						<div class="bet__content">
+							<div class="bet__cards">
+								<div class="bet-card">
+									<header class="bet-card__info">
+										<div class="bet-card__event">
+											<img width="18" height="18" src="img/menu-icons/esports/01.svg" alt="" />
+											Counter-Strike 2, PGL Major Copenhagen 2024
+										</div>
+									</header>
+									<div class="bet-card__rivals">
+										<div class="bet-card__rival rival-bet-card">
+											<a href="#" class="rival-bet-card__main">
+												<div class="rival-bet-card__logo">
+													<picture><source srcset="img/sashi-logo.webp" type="image/webp"><img width="63" height="63" src="img/sashi-logo.png" alt="" /></picture>
+												</div>
+												<div class="rival-bet-card__name">Sashi Academy</div>
+											</a>
+											<a href="#" class="rival-bet-card__bet-info">
+												<span class="_red">1</span>
+												<span class="_red">1,55</span>
+											</a>
+										</div>
+										<div class="bet-card__rival rival-bet-card">
+											<a href="#" class="rival-bet-card__main">
+												<div class="rival-bet-card__logo">
+													<picture><source srcset="img/brut-logo.webp" type="image/webp"><img width="63" height="63" src="img/brut-logo.png" alt="" /></picture>
+												</div>
+												<div class="rival-bet-card__name">Team Brute</div>
+											</a>
+											<a href="#" class="rival-bet-card__bet-info">
+												<span class="_red">2</span>
+												<span class="_red">280</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="bet-card">
+									<header class="bet-card__info">
+										<div class="bet-card__event">
+											<img width="18" height="18" src="img/menu-icons/esports/01.svg" alt="" />
+											Counter-Strike 2, PGL Major Copenhagen 2024
+										</div>
+									</header>
+									<div class="bet-card__rivals">
+										<div class="bet-card__rival rival-bet-card">
+											<a href="#" class="rival-bet-card__main">
+												<div class="rival-bet-card__logo">
+													<picture><source srcset="img/sashi-logo.webp" type="image/webp"><img width="63" height="63" src="img/sashi-logo.png" alt="" /></picture>
+												</div>
+												<div class="rival-bet-card__name">Sashi Academy</div>
+											</a>
+											<a href="#" class="rival-bet-card__bet-info">
+												<span class="_red">1</span>
+												<span class="_red">1,55</span>
+											</a>
+										</div>
+										<div class="bet-card__rival rival-bet-card">
+											<a href="#" class="rival-bet-card__main">
+												<div class="rival-bet-card__logo">
+													<picture><source srcset="img/brut-logo.webp" type="image/webp"><img width="63" height="63" src="img/brut-logo.png" alt="" /></picture>
+												</div>
+												<div class="rival-bet-card__name">Team Brute</div>
+											</a>
+											<a href="#" class="rival-bet-card__bet-info">
+												<span class="_red">2</span>
+												<span class="_red">280</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h2 class="bet__title title">In-Play</h2>
+							<div data-spollers class="tabs-bet__spollers tabs-bet__spollers--hard">
+								<details class="tabs-bets__spoller tabs-bets__spoller--hard" data-open>
+									<summary class="tabs-bets__spoller-title">
+										<div class="tabs-bets__spoller-title_main">
+											<div class="tabs-bets__spoller-title_image">
+												<img src="img/menu-icons/esports/01.svg" alt="" />
+											</div>
+											Counter-Strike 2, PGL Major Copenhagen 2024
+										</div>
+										<span class="bet-spoller-labels">
+											<span class="bet-spoller-label">1</span>
+											<span class="bet-spoller-label">2</span>
+										</span>
+										<span class="_icon-daw-bottom"></span>
+									</summary>
+									<div class="tabs-bets__spoller-body">
+										<div class="bet-info">
+											<div class="bet-info__item">
+												<div class="bet-info__item-label">
+													<div class="bet-info__item-image">
+														<picture><source srcset="img/sashi-logo.webp" type="image/webp"><img src="img/sashi-logo.png" alt="" /></picture>
+													</div>
+													<div class="bet-info__item-title">Preasy Esport</div>
+												</div>
+												<span class="bet-info__item-counts">
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+												</span>
+												<a href="#" class="bet-info__play-btn _icon-play"></a>
+												<span class="bet-info__coefficient">
+													3.20
+													<span class="bet-info__coefficient-arrow"></span>
+												</span>
+											</div>
+											<div class="bet-info__item">
+												<div class="bet-info__item-label">
+													<div class="bet-info__item-image">
+														<picture><source srcset="img/brut-logo.webp" type="image/webp"><img src="img/brut-logo.png" alt="" /></picture>
+													</div>
+													<div class="bet-info__item-title">ForZe</div>
+												</div>
+												<span class="bet-info__item-counts">
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+												</span>
+												<a href="#" class="bet-info__play-btn _icon-play"></a>
+												<span class="bet-info__coefficient">
+													3.20
+													<span class="bet-info__coefficient-arrow"></span>
+												</span>
+											</div>
+											<span class="bet-info__total-all">84</span>
+										</div>
+									</div>
+								</details>
+								<details class="tabs-bets__spoller tabs-bets__spoller--hard" data-open>
+									<summary class="tabs-bets__spoller-title">
+										<div class="tabs-bets__spoller-title_main">
+											<div class="tabs-bets__spoller-title_image">
+												<img src="img/menu-icons/esports/01.svg" alt="" />
+											</div>
+											Counter-Strike 2, PGL Major Copenhagen 2024
+										</div>
+										<span class="bet-spoller-labels">
+											<span class="bet-spoller-label">1</span>
+											<span class="bet-spoller-label">2</span>
+										</span>
+										<span class="_icon-daw-bottom"></span>
+									</summary>
+									<div class="tabs-bets__spoller-body">
+										<div class="bet-info">
+											<div class="bet-info__item">
+												<div class="bet-info__item-label">
+													<div class="bet-info__item-image">
+														<picture><source srcset="img/sashi-logo.webp" type="image/webp"><img src="img/sashi-logo.png" alt="" /></picture>
+													</div>
+													<div class="bet-info__item-title">Preasy Esport</div>
+												</div>
+												<span class="bet-info__item-counts">
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+												</span>
+												<a href="#" class="bet-info__play-btn _icon-play"></a>
+												<span class="bet-info__coefficient">
+													3.20
+													<span class="bet-info__coefficient-arrow"></span>
+												</span>
+											</div>
+											<div class="bet-info__item">
+												<div class="bet-info__item-label">
+													<div class="bet-info__item-image">
+														<picture><source srcset="img/brut-logo.webp" type="image/webp"><img src="img/brut-logo.png" alt="" /></picture>
+													</div>
+													<div class="bet-info__item-title">ForZe</div>
+												</div>
+												<span class="bet-info__item-counts">
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+												</span>
+												<a href="#" class="bet-info__play-btn _icon-play"></a>
+												<span class="bet-info__coefficient">
+													3.20
+													<span class="bet-info__coefficient-arrow"></span>
+												</span>
+											</div>
+											<span class="bet-info__total-all">84</span>
+										</div>
+									</div>
+								</details>
+								<details class="tabs-bets__spoller tabs-bets__spoller--hard" data-open>
+									<summary class="tabs-bets__spoller-title">
+										<div class="tabs-bets__spoller-title_main">
+											<div class="tabs-bets__spoller-title_image">
+												<img src="img/menu-icons/esports/01.svg" alt="" />
+											</div>
+											Counter-Strike 2, PGL Major Copenhagen 2024
+										</div>
+										<span class="bet-spoller-labels">
+											<span class="bet-spoller-label">1</span>
+											<span class="bet-spoller-label">2</span>
+										</span>
+										<span class="_icon-daw-bottom"></span>
+									</summary>
+									<div class="tabs-bets__spoller-body">
+										<div class="bet-info">
+											<div class="bet-info__item">
+												<div class="bet-info__item-label">
+													<div class="bet-info__item-image">
+														<picture><source srcset="img/sashi-logo.webp" type="image/webp"><img src="img/sashi-logo.png" alt="" /></picture>
+													</div>
+													<div class="bet-info__item-title">Preasy Esport</div>
+												</div>
+												<span class="bet-info__item-counts">
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+												</span>
+												<a href="#" class="bet-info__play-btn _icon-play"></a>
+												<span class="bet-info__coefficient">
+													3.20
+													<span class="bet-info__coefficient-arrow"></span>
+												</span>
+											</div>
+											<div class="bet-info__item">
+												<div class="bet-info__item-label">
+													<div class="bet-info__item-image">
+														<picture><source srcset="img/brut-logo.webp" type="image/webp"><img src="img/brut-logo.png" alt="" /></picture>
+													</div>
+													<div class="bet-info__item-title">ForZe</div>
+												</div>
+												<span class="bet-info__item-counts">
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count">0</span>
+													<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+												</span>
+												<a href="#" class="bet-info__play-btn _icon-play"></a>
+												<span class="bet-info__coefficient">
+													3.20
+													<span class="bet-info__coefficient-arrow"></span>
+												</span>
+											</div>
+											<span class="bet-info__total-all">84</span>
+										</div>
+									</div>
+								</details>
+							</div>
+						</div>
 					</div>
 				</div>
-
-				<!-- End Bets List -->
 			</div>
 		</main>
 		<footer class="footer">

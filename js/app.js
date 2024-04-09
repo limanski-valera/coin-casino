@@ -5181,6 +5181,9 @@
                     const sliderWrapper = slider.closest(".casino-categories");
                     const buttonPrev = sliderWrapper.querySelector(".casino-categories-button-prev");
                     const buttonNext = sliderWrapper.querySelector(".casino-categories-button-next");
+                    function checkIsSliderInline() {
+                        if (buttonNext.classList.contains("swiper-button-lock")) slider.classList.add("_inline");
+                    }
                     new swiper_core_Swiper(slider, {
                         modules: [ Navigation ],
                         observer: true,
@@ -5191,9 +5194,9 @@
                         navigation: {
                             prevEl: buttonPrev,
                             nextEl: buttonNext
-                        },
-                        breakpoints: {}
+                        }
                     });
+                    checkIsSliderInline();
                 }));
             }
             if (document.querySelector(".slider-block-kind__slider")) new swiper_core_Swiper(".slider-block-kind__slider", {
