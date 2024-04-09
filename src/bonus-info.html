@@ -1,39 +1,35 @@
 <!doctype html>
 <html lang="uk">
-    @@include('html/_head.htm',{ "title":"Bonus info" })
-    <body>
-        <div class="wrapper">
-            @@include('html/_header.htm',{})
-            <main>
-                <div class="page page-free-box">
-                    <section class="banner">
-                        <div class="banner__container">
-                            <div class="banner__wrapper">
-                                <img width="1556" height="400" data-src="@img/banners/05-bg.png" alt="" class="banner__bg" />
-                                <div class="banner__content">
-                                    <h2 class="banner__title">РОЗБЛОКУЙТЕ НЕСКІНЧЕННІ ПЕРЕВАГИ</h2>
-                                    <div class="banner__text">
-                                        Приєднуйтеся зараз і вирушайте в захоплюючу подорож удачі та
-                                        нагород
-                                    </div>
-                                </div>
-                                <div class="banner__image">
-                                    <img width="906" height="430" data-src="@img/banners/05.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Start Benefits -->
-                    @@include('html/components/benefits-list/_benefits-list-bonus.htm',{})
-                    <!-- End Benefits -->
+	@@include('html/_head.htm',{ "title":"Bonus info" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main>
+				<div class="page page-free-box">
+					<section class="banner">
+						<div class="banner__container">
+							<div class="banner__wrapper">
+								<img width="1556" height="400" data-src="@img/banners/05-bg.png" alt="" class="banner__bg" />
+								<div class="banner__content">
+									<h2 class="banner__title">РОЗБЛОКУЙТЕ НЕСКІНЧЕННІ ПЕРЕВАГИ</h2>
+									<div class="banner__text">Приєднуйтеся зараз і вирушайте в захоплюючу подорож удачі та нагород</div>
+								</div>
+								<div class="banner__image">
+									<img width="906" height="430" data-src="@img/banners/05.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</section>
 
-                    <div class="__container">
-                        @@include('html/components/cards-list/_cards-list-bonus.htm',{})
-                    </div>
-                </div>
-            </main>
-            @@include('html/_footer.htm',{})
-        </div>
-        @@include('html/_js.htm',{})
-    </body>
+					<!-- Start Benefits -->
+					@@include('html/components/benefits-list/_benefits-list-bonus.htm',{})
+					<!-- End Benefits -->
+
+					<div class="__container">@@include('html/components/cards-list/_cards-list-bonus.htm',{})</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/components/popups/_weekly-popup.htm') @@include('html/_js.htm',{})
+	</body>
 </html>

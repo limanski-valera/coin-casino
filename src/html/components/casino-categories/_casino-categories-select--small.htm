@@ -1,0 +1,28 @@
+<section class="casino-categories">
+	<div class="casino-categories__container">
+		<div class="casino-categories__header">
+			<h2 class="casino-categories__title title">Казино</h2>
+			<div class="casino-categories__select-wrapper">
+				<select name="form[]" data-class-modif="form">
+					<option value="1" selected>Всі провайдери</option>
+					<option value="2">Перший</option>
+					<option value="3">Другий</option>
+					<option value="4">Третій</option>
+				</select>
+			</div>
+			<div class="casino-categories__buttons">
+				<button type="button" class="casino-categories-button-prev swiper-button _icon-slider-arrow-left"></button>
+				<button type="button" class="casino-categories-button-next swiper-button _icon-slider-arrow-right"></button>
+			</div>
+		</div>
+		<div class="casino-categories__slider swiper">
+			<div class="casino-categories__wrapper swiper-wrapper">
+				@@include('./_casino-category-slide.htm',{"title":"Лобі","image":"lobby.png"}) 
+                @@include('./_casino-category-slide.htm',{"title":"Новинки","image":"news.png"})
+				@@include('./_casino-category-slide.htm',{"title":"Aviator","image":"aviator.png"})
+                @@include('./_casino-category-slide.htm',{"title":"Popular","image":"popular.png"})
+				@@include('./_casino-category-slide.htm',{"title":"Bonus BUY","image":"bonus-buy.png"})
+			</div>
+		</div>
+	</div>
+</section>

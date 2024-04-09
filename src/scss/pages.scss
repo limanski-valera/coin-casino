@@ -3,3 +3,46 @@
 @import "./pages/partners";
 @import "./pages/vip-club";
 @import "./pages/kind";
+@import "./pages/bet";
+
+.page {
+	padding-top: toRem(100);
+	@media (min-width: $tablet) {
+		@media (max-width: toRem(1800)) {
+			padding-left: toRem(100);
+		}
+	}
+}
+.page-home {
+	@include adaptiveValue("padding-bottom", 100, 50);
+	.games {
+		@include adaptiveValue("margin-bottom", 100, 50);
+	}
+}
+.page-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0;
+	background: var(--bg-secondary);
+}
+.page-free-box {
+	@include adaptiveValue("padding-bottom", 100, 60);
+}
+.page-casino {
+	@include adaptiveValue("padding-bottom", 100, 50);
+}
+.page-slots {
+	@include adaptiveValue("padding-bottom", 100, 50);
+}
+.page-game {
+	@include adaptiveValue("padding-bottom", 100, 50);
+}
+.page-bet {
+	.casino-categories {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+}

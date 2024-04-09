@@ -4,6 +4,8 @@
         display: inline-flex;
         background-color: var(--bg-secondary);
         border-radius: 20px;
+        max-width: 100%;
+        overflow-x: auto;
     }
     // .tabs__title
     &__title {

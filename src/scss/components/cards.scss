@@ -1,0 +1,223 @@
+.cards-list {
+	display: flex;
+	flex-direction: column;
+	&__items {
+		@include adaptiveValue("margin-bottom", 50, 30);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: toRem(30);
+		column-gap: toRem(20);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__button {
+		align-self: center;
+	}
+}
+.card {
+	&__image {
+		padding-bottom: 58.333333%; /* 210/360 */
+		border-radius: 30px;
+		overflow: hidden;
+		overflow: hidden;
+		display: block;
+		position: relative;
+		margin-bottom: toRem(20);
+		background-color: var(--bg-secondary);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+	&__content {
+	}
+	&__categories {
+		display: flex;
+		gap: toRem(5);
+		flex-wrap: wrap;
+		font-weight: 600;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&__category {
+		padding: toRem(10);
+		color: #9cb3d2;
+		font-size: toRem(12);
+		font-weight: 600;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		min-width: toRem(75);
+		border-radius: 100px;
+		background-color: var(--bg-secondary);
+	}
+	&__title {
+		@include adaptiveValue("font-size", 20, 15);
+		font-weight: 800;
+		color: var(--text-secondary);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__link {
+		font-weight: 800;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.card-game {
+	display: block;
+	width: 100%;
+	&--small {
+		position: relative;
+		padding-bottom: 133.72093%; /* 230/172 */
+	}
+	&__wrapper {
+		padding-bottom: 133.72093%; /* 230/172 */
+		position: relative;
+		border-radius: 15px;
+		overflow: hidden;
+		color: var(--text-secondary);
+		&::before {
+			content: "";
+			position: absolute;
+			border-radius: 15px;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(22, 31, 44, 0.78);
+			backdrop-filter: blur(10px);
+			z-index: 2;
+			transition: opacity 0.3s;
+			opacity: 0;
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				opacity: 1;
+			}
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__category {
+		position: absolute;
+		top: toRem(10);
+		left: toRem(10);
+		max-width: calc(100% - toRem(20));
+		padding: toRem(9) toRem(12);
+		border-radius: 60px;
+		background: linear-gradient(180deg, #ff2151 2.74%, #ff0041 47.4%, #d70036 100%);
+		display: flex;
+		gap: toRem(5);
+		align-items: center;
+		z-index: 2;
+		font-weight: 800;
+		transition:
+			opacity 0.3s,
+			transform 0.3s;
+		@media (any-hover: hover) {
+			.card-game:hover & {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		gap: toRem(30);
+		opacity: 0;
+		transform: translateY(10px);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+		padding: toRem(25) toRem(10);
+		transition:
+			opacity 0.3s,
+			transform 0.3s;
+		@media (any-hover: hover) {
+			.card-game:hover & {
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__icon {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: toRem(4);
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			z-index: -1;
+			background-color: var(--primary-dark);
+		}
+		&::before {
+			width: toRem(78);
+			height: toRem(78);
+			background-color: var(--primary);
+			box-shadow: 0px 5px 50px rgba(255, 0, 66, 0.81);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+	}
+	&__info {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__title {
+		font-weight: 800;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__sub-title {
+		font-size: toRem(10);
+		font-weight: 500;
+	}
+}

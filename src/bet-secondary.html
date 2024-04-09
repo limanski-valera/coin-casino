@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Ставка" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main>
+				<div class="page page-bet">
+					@@include('html/components/casino-categories/_casino-categories-select--small.htm',{})
+
+					<div class="bet">
+						<div class="bet__container">
+							<div class="bet__window window-bet">
+								<header class="window-bet__header">
+									<span class="window-bet__title">COMBO<span class="window-bet__title-count">2</span></span>
+									<button class="window-bet__close-btn _icon-close"></button>
+									<span class="window-bet__title">My bets</span>
+								</header>
+								<div data-tabs class="window-bet__tabs">
+									<nav data-tabs-titles class="window-bet__navigation">
+										<button type="button" class="window-bet__part-title _tab-active">SINGLES</button>
+										<button type="button" class="window-bet__part-title">COMBO</button>
+										<button type="button" class="window-bet__part-title">SYSTEM</button>
+									</nav>
+									<div data-tabs-body class="window-bet__content">
+										<div class="window-bet__body">
+											<div class="window-bet__placeholder">
+												<img src="@img/bet-placeholder.svg" alt="" class="window-bet__placeholder-image" />
+												<div class="window-bet__placeholder-text">No bets history plased here</div>
+											</div>
+										</div>
+										<div class="window-bet__body">
+											<div class="window-bet__bet">
+												<div class="window-bet__bet-info">
+													<div class="window-bet__bet-title">Тотал очок | Меньше (223)</div>
+													<div class="window-bet__bet-rivals">Anadolu Efes SK — BC Olympiakos Piraeus</div>
+												</div>
+												<span class="window-bet__bet-coefficient">1.95</span>
+												<button class="window-bet__bet-remove-btn _icon-close"></button>
+											</div>
+											<div class="window-bet__bet">
+												<div class="window-bet__bet-info">
+													<div class="window-bet__bet-title">Фора очок | Anadolu Efes SK (-13)</div>
+													<div class="window-bet__bet-rivals">Anadolu Efes SK — BC Olympiakos Piraeus</div>
+												</div>
+												<span class="window-bet__bet-coefficient">1.95</span>
+												<button class="window-bet__bet-remove-btn _icon-close"></button>
+											</div>
+											<div class="window-bet__options">
+												<div class="window-bet__option">
+													<input type="radio" id="b1" name="stake" value="150" class="window-bet__option-input" />
+													<label for="b1" class="window-bet__option-label">150</label>
+												</div>
+												<div class="window-bet__option">
+													<input type="radio" id="b2" name="stake" value="600" class="window-bet__option-input" />
+													<label for="b2" class="window-bet__option-label">600</label>
+												</div>
+												<div class="window-bet__option">
+													<input type="radio" id="b3" name="stake" value="1500" class="window-bet__option-input" />
+													<label for="b3" class="window-bet__option-label">1500</label>
+												</div>
+												<div class="window-bet__option">
+													<input type="radio" id="b4" name="stake" value="3000" class="window-bet__option-input" />
+													<label for="b4" class="window-bet__option-label">3000</label>
+												</div>
+											</div>
+											<div class="window-bet__text">Total stake</div>
+											<div class="window-bet__text">Potential win</div>
+											<div class="window-bet__actives">
+												<button class="window-bet__button button">
+													<span class="button__text">Sign in & Place Bet</span>
+												</button>
+												<button class="window-bet__delete-button _icon-trash"></button>
+											</div>
+											<button class="window-bet__share-btn _icon-share">Share bet</button>
+										</div>
+										<div class="window-bet__body">
+											<div class="window-bet__placeholder">
+												<img src="@img/bet-placeholder.svg" alt="" class="window-bet__placeholder-image" />
+												<div class="window-bet__placeholder-text">No bets history plased here</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bet__content">
+								<div class="bet__cards">
+									<div class="bet-card">
+										<header class="bet-card__info">
+											<div class="bet-card__event">
+												<img width="18" height="18" src="@img/menu-icons/esports/01.svg" alt="" />
+												Counter-Strike 2, PGL Major Copenhagen 2024
+											</div>
+										</header>
+										<div class="bet-card__rivals">
+											<div class="bet-card__rival rival-bet-card">
+												<a href="#" class="rival-bet-card__main">
+													<div class="rival-bet-card__logo">
+														<img width="63" height="63" src="@img/sashi-logo.png" alt="" />
+													</div>
+													<div class="rival-bet-card__name">Sashi Academy</div>
+												</a>
+												<a href="#" class="rival-bet-card__bet-info">
+													<span class="_red">1</span>
+													<span class="_red">1,55</span>
+												</a>
+											</div>
+											<div class="bet-card__rival rival-bet-card">
+												<a href="#" class="rival-bet-card__main">
+													<div class="rival-bet-card__logo">
+														<img width="63" height="63" src="@img/brut-logo.png" alt="" />
+													</div>
+													<div class="rival-bet-card__name">Team Brute</div>
+												</a>
+												<a href="#" class="rival-bet-card__bet-info">
+													<span class="_red">2</span>
+													<span class="_red">280</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="bet-card">
+										<header class="bet-card__info">
+											<div class="bet-card__event">
+												<img width="18" height="18" src="@img/menu-icons/esports/01.svg" alt="" />
+												Counter-Strike 2, PGL Major Copenhagen 2024
+											</div>
+										</header>
+										<div class="bet-card__rivals">
+											<div class="bet-card__rival rival-bet-card">
+												<a href="#" class="rival-bet-card__main">
+													<div class="rival-bet-card__logo">
+														<img width="63" height="63" src="@img/sashi-logo.png" alt="" />
+													</div>
+													<div class="rival-bet-card__name">Sashi Academy</div>
+												</a>
+												<a href="#" class="rival-bet-card__bet-info">
+													<span class="_red">1</span>
+													<span class="_red">1,55</span>
+												</a>
+											</div>
+											<div class="bet-card__rival rival-bet-card">
+												<a href="#" class="rival-bet-card__main">
+													<div class="rival-bet-card__logo">
+														<img width="63" height="63" src="@img/brut-logo.png" alt="" />
+													</div>
+													<div class="rival-bet-card__name">Team Brute</div>
+												</a>
+												<a href="#" class="rival-bet-card__bet-info">
+													<span class="_red">2</span>
+													<span class="_red">280</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<h2 class="bet__title title">In-Play</h2>
+								<div data-spollers class="tabs-bet__spollers tabs-bet__spollers--hard">
+									<details class="tabs-bets__spoller tabs-bets__spoller--hard" data-open>
+										<summary class="tabs-bets__spoller-title">
+											<div class="tabs-bets__spoller-title_main">
+												<div class="tabs-bets__spoller-title_image">
+													<img src="@img/menu-icons/esports/01.svg" alt="" />
+												</div>
+												Counter-Strike 2, PGL Major Copenhagen 2024
+											</div>
+											<span class="bet-spoller-labels">
+												<span class="bet-spoller-label">1</span>
+												<span class="bet-spoller-label">2</span>
+											</span>
+											<span class="_icon-daw-bottom"></span>
+										</summary>
+										<div class="tabs-bets__spoller-body">
+											<div class="bet-info">
+												<div class="bet-info__item">
+													<div class="bet-info__item-label">
+														<div class="bet-info__item-image">
+															<img src="@img/sashi-logo.png" alt="" />
+														</div>
+														<div class="bet-info__item-title">Preasy Esport</div>
+													</div>
+													<span class="bet-info__item-counts">
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+													</span>
+													<a href="#" class="bet-info__play-btn _icon-play"></a>
+													<span class="bet-info__coefficient">
+														3.20
+														<span class="bet-info__coefficient-arrow"></span>
+													</span>
+												</div>
+												<div class="bet-info__item">
+													<div class="bet-info__item-label">
+														<div class="bet-info__item-image">
+															<img src="@img/brut-logo.png" alt="" />
+														</div>
+														<div class="bet-info__item-title">ForZe</div>
+													</div>
+													<span class="bet-info__item-counts">
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+													</span>
+													<a href="#" class="bet-info__play-btn _icon-play"></a>
+													<span class="bet-info__coefficient">
+														3.20
+														<span class="bet-info__coefficient-arrow"></span>
+													</span>
+												</div>
+												<span class="bet-info__total-all">84</span>
+											</div>
+										</div>
+									</details>
+									<details class="tabs-bets__spoller tabs-bets__spoller--hard" data-open>
+										<summary class="tabs-bets__spoller-title">
+											<div class="tabs-bets__spoller-title_main">
+												<div class="tabs-bets__spoller-title_image">
+													<img src="@img/menu-icons/esports/01.svg" alt="" />
+												</div>
+												Counter-Strike 2, PGL Major Copenhagen 2024
+											</div>
+											<span class="bet-spoller-labels">
+												<span class="bet-spoller-label">1</span>
+												<span class="bet-spoller-label">2</span>
+											</span>
+											<span class="_icon-daw-bottom"></span>
+										</summary>
+										<div class="tabs-bets__spoller-body">
+											<div class="bet-info">
+												<div class="bet-info__item">
+													<div class="bet-info__item-label">
+														<div class="bet-info__item-image">
+															<img src="@img/sashi-logo.png" alt="" />
+														</div>
+														<div class="bet-info__item-title">Preasy Esport</div>
+													</div>
+													<span class="bet-info__item-counts">
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+													</span>
+													<a href="#" class="bet-info__play-btn _icon-play"></a>
+													<span class="bet-info__coefficient">
+														3.20
+														<span class="bet-info__coefficient-arrow"></span>
+													</span>
+												</div>
+												<div class="bet-info__item">
+													<div class="bet-info__item-label">
+														<div class="bet-info__item-image">
+															<img src="@img/brut-logo.png" alt="" />
+														</div>
+														<div class="bet-info__item-title">ForZe</div>
+													</div>
+													<span class="bet-info__item-counts">
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+													</span>
+													<a href="#" class="bet-info__play-btn _icon-play"></a>
+													<span class="bet-info__coefficient">
+														3.20
+														<span class="bet-info__coefficient-arrow"></span>
+													</span>
+												</div>
+												<span class="bet-info__total-all">84</span>
+											</div>
+										</div>
+									</details>
+									<details class="tabs-bets__spoller tabs-bets__spoller--hard" data-open>
+										<summary class="tabs-bets__spoller-title">
+											<div class="tabs-bets__spoller-title_main">
+												<div class="tabs-bets__spoller-title_image">
+													<img src="@img/menu-icons/esports/01.svg" alt="" />
+												</div>
+												Counter-Strike 2, PGL Major Copenhagen 2024
+											</div>
+											<span class="bet-spoller-labels">
+												<span class="bet-spoller-label">1</span>
+												<span class="bet-spoller-label">2</span>
+											</span>
+											<span class="_icon-daw-bottom"></span>
+										</summary>
+										<div class="tabs-bets__spoller-body">
+											<div class="bet-info">
+												<div class="bet-info__item">
+													<div class="bet-info__item-label">
+														<div class="bet-info__item-image">
+															<img src="@img/sashi-logo.png" alt="" />
+														</div>
+														<div class="bet-info__item-title">Preasy Esport</div>
+													</div>
+													<span class="bet-info__item-counts">
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+													</span>
+													<a href="#" class="bet-info__play-btn _icon-play"></a>
+													<span class="bet-info__coefficient">
+														3.20
+														<span class="bet-info__coefficient-arrow"></span>
+													</span>
+												</div>
+												<div class="bet-info__item">
+													<div class="bet-info__item-label">
+														<div class="bet-info__item-image">
+															<img src="@img/brut-logo.png" alt="" />
+														</div>
+														<div class="bet-info__item-title">ForZe</div>
+													</div>
+													<span class="bet-info__item-counts">
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count">0</span>
+														<span class="bet-info__item-count bet-info__item-count--total"><span class="_red">84</span></span>
+													</span>
+													<a href="#" class="bet-info__play-btn _icon-play"></a>
+													<span class="bet-info__coefficient">
+														3.20
+														<span class="bet-info__coefficient-arrow"></span>
+													</span>
+												</div>
+												<span class="bet-info__total-all">84</span>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

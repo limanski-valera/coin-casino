@@ -256,6 +256,9 @@
         @media (any-hover: hover) {
             &:hover {
                 background-color: #253041;
+                .item-sub-menu__image img {
+                    opacity: 0;
+                }
                 .item-sub-menu__image::before {
                     opacity: 1;
                     transform: scale(1);
@@ -283,7 +286,7 @@
             transform: scale(0.5);
             opacity: 0;
             pointer-events: none;
-            transform:
+            transition:
                 transform 0.3s,
                 opacity 0.3s;
         }
@@ -291,6 +294,7 @@
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
+            transition: opacity 0.3s;
         }
     }
     &__content {

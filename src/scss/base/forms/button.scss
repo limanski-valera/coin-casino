@@ -2,115 +2,183 @@
 // Сніппет (HTML): btn
 
 .button {
-    display: inline-flex;
-    color: var(--text-secondary);
-    font-weight: 800;
-    padding-bottom: toRem(5);
-    position: relative;
-    border-radius: 8px;
-    background-color: var(--primary-dark);
-    transition: box-shadow 0.3s;
-    justify-content: center;
-    text-align: center;
-    @include adaptiveValue("font-size", 15, 10);
-    &:hover {
-        box-shadow: 0px 5px 50px 0px rgba(255, 0, 66, 0.81);
-    }
-    &.button--green {
-        background-color: #558602;
-        &:hover {
-            box-shadow: 0px 5px 50px 0px rgb(146, 221, 0, 0.81);
-        }
-    }
-    img {
-        position: absolute;
-        max-width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-    &__text {
-        position: relative;
-        z-index: 2;
-        background: var(--linear-primary);
-        width: 100%;
-        padding: toRem(20) toRem(50);
-        display: block;
-        border-radius: 8px;
-        @media (max-width: $mobile) {
-            .header__registry & {
-                padding: toRem(13);
-            }
-            .header__login & {
-                padding: toRem(13);
-            }
-        }
-        .button--green & {
-            padding: toRem(20) toRem(25);
-            background: linear-gradient(180deg, #92dd00 0%, #6dae00 95.45%);
-        }
-    }
-    @media (any-hover: hover) {
-        &:hover {
-        }
-    }
-    &--fw {
-        width: 100%;
-    }
-    &--violette {
-        background-color: #8300c5;
-        .button__text {
-            background: linear-gradient(
-                180deg,
-                rgb(204, 79, 255) 2.4%,
-                rgb(184, 26, 244) 46.4%,
-                rgb(167, 25, 241) 95.455%
-            );
-        }
-        &:hover {
-            box-shadow: 0px 5px 50px 0px rgba(rgb(184, 26, 244), 0.5);
-        }
-    }
-    &--yellow {
-        background-color: #b85f00;
-        .button__text {
-            background: var(--linear-secondary);
-        }
-        &:hover {
-            box-shadow: 0px 5px 50px 0px rgba(rgb(255, 174, 21), 0.5);
-        }
-    }
-    &--middle {
-        min-width: toRem(230);
-    }
+	display: inline-flex;
+	color: var(--text-secondary);
+	font-weight: 800;
+	padding-bottom: toRem(5);
+	position: relative;
+	border-radius: 8px;
+	background-color: var(--primary-dark);
+	transition: box-shadow 0.3s;
+	justify-content: center;
+	text-align: center;
+	@include adaptiveValue("font-size", 15, 10);
+	&[disabled] {
+		opacity: 0.2;
+		pointer-events: none;
+	}
+	&:hover {
+		box-shadow: 0px 5px 50px 0px rgba(255, 0, 66, 0.81);
+	}
+	&.button--green {
+		background-color: #558602;
+		&:hover {
+			box-shadow: 0px 5px 50px 0px rgb(146, 221, 0, 0.81);
+		}
+	}
+	img {
+		position: absolute;
+		max-width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+	&__text {
+		position: relative;
+		z-index: 2;
+		background: var(--linear-primary);
+		width: 100%;
+		padding: toRem(20) toRem(50);
+		display: block;
+		border-radius: 8px;
+		@media (max-width: $mobile) {
+			.header__registry & {
+				padding: toRem(13);
+			}
+			.header__login & {
+				padding: toRem(13);
+			}
+		}
+		.button--green & {
+			padding: toRem(20) toRem(25);
+			background: linear-gradient(180deg, #92dd00 0%, #6dae00 95.45%);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+	&--violette {
+		background-color: #8300c5;
+		.button__text {
+			background: linear-gradient(180deg, rgb(204, 79, 255) 2.4%, rgb(184, 26, 244) 46.4%, rgb(167, 25, 241) 95.455%);
+		}
+		&:hover {
+			box-shadow: 0px 5px 50px 0px rgba(rgb(184, 26, 244), 0.5);
+		}
+	}
+	&--yellow {
+		background-color: #b85f00;
+		.button__text {
+			background: var(--linear-secondary);
+		}
+		&:hover {
+			box-shadow: 0px 5px 50px 0px rgba(rgb(255, 174, 21), 0.5);
+		}
+	}
+	&--middle {
+		min-width: toRem(230);
+	}
 }
 //========================================================================================================================================================
 .button-sidebar {
-    padding: 0 toRem(16);
-    border-radius: 8px;
-    border: 1px solid #253041;
-    color: #9cb3d2;
-    font-weight: 700;
-    display: flex;
-    gap: toRem(15);
-    align-items: center;
-    justify-content: space-between;
-    transition:
-        background-color 0.3s,
-        box-shadow 0.3s;
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: rgba(50, 63, 84, 0.63);
-            box-shadow: 0px 4px 50px 0px rgba(50, 63, 84, 0.73);
-        }
-    }
-    &__text {
-        padding: toRem(12) 0;
-    }
-    &__image {
-        width: toRem(45);
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
+	padding: 0 toRem(16);
+	border-radius: 8px;
+	border: 1px solid #253041;
+	color: #9cb3d2;
+	font-weight: 700;
+	display: flex;
+	gap: toRem(15);
+	align-items: center;
+	justify-content: space-between;
+	transition:
+		background-color 0.3s,
+		box-shadow 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(50, 63, 84, 0.63);
+			box-shadow: 0px 4px 50px 0px rgba(50, 63, 84, 0.73);
+		}
+	}
+	&__text {
+		padding: toRem(12) 0;
+	}
+	&__image {
+		width: toRem(45);
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+//========================================================================================================================================================
+// Service Button
+.service-button {
+	display: none;
+	@media (min-width: $tablet) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: toRem(70);
+		height: toRem(70);
+		border-radius: 50%;
+		background: var(--linear-primary);
+		font-size: toRem(35);
+		color: var(--text-secondary);
+		position: fixed;
+		top: toRem(220);
+		right: toRem(20);
+		z-index: 100;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: linear-gradient(180deg, rgba(255, 33, 81, 0.48) 2.74%, rgba(255, 0, 65, 0) 47.4%, rgba(215, 0, 54, 0.48) 100%);
+		}
+		&::before {
+			transform: scale(1.3);
+			animation: serviceButtonWaveFirst 1s infinite linear;
+		}
+		&::after {
+			transform: scale(1.57) rotate(-40.997deg);
+			animation: serviceButtonWaveSecond 1s infinite linear;
+			animation-delay: 0.5s;
+		}
+		._icon-services {
+			transition: transform 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				._icon-services {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}
+@keyframes serviceButtonWaveFirst {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.3);
+		opacity: 0;
+	}
+}
+@keyframes serviceButtonWaveSecond {
+	0% {
+		transform: scale(1) rotate(-40.997deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.57) rotate(-40.997deg);
+		opacity: 0;
+	}
 }

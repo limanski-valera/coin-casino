@@ -1,0 +1,105 @@
+.rake {
+	&__body {
+		border-radius: 30px;
+		background: #161f2c;
+		overflow: hidden;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+		}
+		@media (max-width: $mobile) {
+			border-radius: toRem(20);
+		}
+	}
+	&__image {
+		position: relative;
+		@media (min-width: $mobile) {
+			flex: 0 0 auto;
+			width: toRem(300);
+			height: toRem(300);
+		}
+		@media (max-width: $mobile) {
+			height: toRem(240);
+			text-align: center;
+            width: 100%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			position: relative;
+			z-index: 2;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			background: linear-gradient(180deg, #92dd00 0%, #6dae00 95.45%);
+			@media (min-width: $mobile) {
+				top: 50%;
+				transform: translate(0, -50%);
+				right: toRem(-13);
+				width: toRem(420);
+				height: toRem(420);
+			}
+			@media (max-width: $mobile) {
+				width: 123%;
+				padding-bottom: 123%;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	&__content {
+		padding: toRem(20) toRem(10) toRem(20) toRem(35);
+		flex: 1 1 auto;
+        @media (max-width:$mobile){
+            padding: toRem(20) toRem(20) toRem(30);
+        }
+	}
+	&__label {
+		font-weight: 500;
+		font-size: toRem(20);
+		line-height: 1.25;
+		color: var(--text-secondary);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__counter {
+		display: inline-block;
+		font-size: toRem(30);
+		font-weight: 800;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__text {
+		line-height: 1.33;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&__button {
+		width: 100%;
+		max-width: toRem(230);
+	}
+	&__info {
+		border-radius: toRem(20);
+		border: 1px dashed #415775;
+		padding: toRem(15);
+	}
+	&__info-label {
+		color: var(--text-secondary);
+		display: flex;
+		gap: toRem(5);
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(13);
+		}
+	}
+}

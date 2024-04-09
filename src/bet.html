@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Ставка" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main>
+				<div class="page page-bet">
+					@@include('html/components/casino-categories/_casino-categories-select.htm',{})
+
+					<div class="bet">
+						<div class="bet__container">
+							<div class="bet__window window-bet">
+								<header class="window-bet__header">
+									<span class="window-bet__title">COMBO<span class="window-bet__title-count">2</span></span>
+									<button class="window-bet__close-btn _icon-close"></button>
+									<span class="window-bet__title">My bets</span>
+								</header>
+								<div data-tabs class="window-bet__tabs">
+									<nav data-tabs-titles class="window-bet__navigation">
+										<button type="button" class="window-bet__part-title">SINGLES</button>
+										<button type="button" class="window-bet__part-title _tab-active">COMBO</button>
+										<button type="button" class="window-bet__part-title">SYSTEM</button>
+									</nav>
+									<div data-tabs-body class="window-bet__content">
+										<div class="window-bet__body">
+											<div class="window-bet__placeholder">
+												<img src="@img/bet-placeholder.svg" alt="" class="window-bet__placeholder-image" />
+												<div class="window-bet__placeholder-text">No bets history plased here</div>
+											</div>
+										</div>
+										<div class="window-bet__body">
+											<div class="window-bet__bet">
+												<div class="window-bet__bet-info">
+													<div class="window-bet__bet-title">Тотал очок | Меньше (223)</div>
+													<div class="window-bet__bet-rivals">Anadolu Efes SK — BC Olympiakos Piraeus</div>
+												</div>
+												<span class="window-bet__bet-coefficient">1.95</span>
+												<button class="window-bet__bet-remove-btn _icon-close"></button>
+											</div>
+											<div class="window-bet__bet">
+												<div class="window-bet__bet-info">
+													<div class="window-bet__bet-title">Фора очок | Anadolu Efes SK (-13)</div>
+													<div class="window-bet__bet-rivals">Anadolu Efes SK — BC Olympiakos Piraeus</div>
+												</div>
+												<span class="window-bet__bet-coefficient">1.95</span>
+												<button class="window-bet__bet-remove-btn _icon-close"></button>
+											</div>
+											<div class="window-bet__options">
+												<div class="window-bet__option">
+													<input type="radio" id="b1" name="stake" value="150" class="window-bet__option-input" />
+													<label for="b1" class="window-bet__option-label">150</label>
+												</div>
+												<div class="window-bet__option">
+													<input type="radio" id="b2" name="stake" value="600" class="window-bet__option-input" />
+													<label for="b2" class="window-bet__option-label">600</label>
+												</div>
+												<div class="window-bet__option">
+													<input type="radio" id="b3" name="stake" value="1500" class="window-bet__option-input" />
+													<label for="b3" class="window-bet__option-label">1500</label>
+												</div>
+												<div class="window-bet__option">
+													<input type="radio" id="b4" name="stake" value="3000" class="window-bet__option-input" />
+													<label for="b4" class="window-bet__option-label">3000</label>
+												</div>
+											</div>
+											<div class="window-bet__text">Total stake</div>
+											<div class="window-bet__text">Potential win</div>
+											<div class="window-bet__actives">
+												<button class="window-bet__button button">
+													<span class="button__text">Sign in & Place Bet</span>
+												</button>
+												<button class="window-bet__delete-button _icon-trash"></button>
+											</div>
+											<button class="window-bet__share-btn _icon-share">Share bet</button>
+										</div>
+										<div class="window-bet__body">
+											<div class="window-bet__placeholder">
+												<img src="@img/bet-placeholder.svg" alt="" class="window-bet__placeholder-image" />
+												<div class="window-bet__placeholder-text">No bets history plased here</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bet__content">
+								<div class="statistics">
+									<header class="statistics__header">
+										<div class="statistics__info">
+											<div class="statistics__image">
+												<img src="@img/menu-icons/basketball-02.svg" alt="" />
+											</div>
+											<h2 class="statistics__title">Basketball / Russia / Superleague, 1st Division</h2>
+										</div>
+										<div class="statistics__counts-label">
+											<span class="statistics__count-label">Q1</span>
+											<span class="statistics__count-label">Q2</span>
+											<span class="statistics__count-label">Q3</span>
+										</div>
+									</header>
+									<ul class="statistics__items">
+										<li class="statistics__item">
+											<div class="statistics__item-info">
+												<div class="statistics__item-image">
+													<img src="@img/games/game-01.png" alt="" />
+												</div>
+												<h3 class="statistics__item-label">Mba-Mai Moscow</h3>
+											</div>
+											<div class="statistics__item-counters">
+												<span class="statistics__item-counter">23</span>
+												<span class="statistics__item-counter">22</span>
+												<span class="statistics__item-counter">23</span>
+												<span class="statistics__item-counter statistics__item-counter--total">84</span>
+											</div>
+										</li>
+										<li class="statistics__item">
+											<div class="statistics__item-info">
+												<div class="statistics__item-image">
+													<img src="@img/games/game-01.png" alt="" />
+												</div>
+												<h3 class="statistics__item-label">Rusichi Kursk</h3>
+											</div>
+											<div class="statistics__item-counters">
+												<span class="statistics__item-counter">23</span>
+												<span class="statistics__item-counter">22</span>
+												<span class="statistics__item-counter">23</span>
+												<span class="statistics__item-counter statistics__item-counter--total">86</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div data-tabs class="tabs-bet">
+									<nav data-tabs-titles class="tabs__navigation">
+										<button type="button" class="tabs__title _tab-active">TOP</button>
+										<button type="button" class="tabs__title">All</button>
+										<button type="button" class="tabs__title">Total</button>
+										<button type="button" class="tabs__title">Handicap</button>
+										<button type="button" class="tabs__title">Quarter</button>
+										<button type="button" class="tabs__title">Half</button>
+										<button type="button" class="tabs__title">STATISTICS</button>
+									</nav>
+									<div data-tabs-body class="tabs-bet__content">
+										<div class="tabs-bet__body">
+											<div data-spollers class="tabs-bet__spollers">
+												<details class="tabs-bets__spoller" data-open>
+													<summary class="tabs-bets__spoller-title">
+														Переможець матчу
+														<span class="_icon-daw-bottom"></span>
+													</summary>
+													<div class="tabs-bets__spoller-body">
+														<div class="bet-option">
+															<input type="radio" name="winner" id="p1" value="p1" class="bet-option__input" />
+															<label for="p1" class="bet-option__label"
+																><span class="bet-option__label-circle"></span><span class="bet-option__label-info">Сакраменто Кінгс</span
+																><span class="bet-option__label-coefficient">1.15</span></label
+															>
+														</div>
+														<div class="bet-option">
+															<input type="radio" name="winner" id="p2" value="p2" class="bet-option__input" />
+															<label for="p2" class="bet-option__label"
+																><span class="bet-option__label-circle"></span><span class="bet-option__label-info">Вашингтон Визардс</span
+																><span class="bet-option__label-coefficient">5.30</span></label
+															>
+														</div>
+													</div>
+												</details>
+												<details class="tabs-bets__spoller" data-open>
+													<summary class="tabs-bets__spoller-title">
+														Результат матчу (основний час)
+														<span class="_icon-daw-bottom"></span>
+													</summary>
+													<div class="tabs-bets__spoller-body tabs-bets__spoller-body--row">
+														<div class="bet-option">
+															<input type="radio" name="result" id="r1" value="r1" class="bet-option__input" />
+															<label for="r1" class="bet-option__label"
+																><span class="bet-option__label-info">Сакраменто Кінгс</span><span class="bet-option__label-coefficient">1.16</span></label
+															>
+														</div>
+														<div class="bet-option">
+															<input type="radio" name="result" id="r2" value="r2" class="bet-option__input" />
+															<label for="r2" class="bet-option__label"
+																><span class="bet-option__label-info">Нічия</span><span class="bet-option__label-coefficient">19,00</span></label
+															>
+														</div>
+														<div class="bet-option">
+															<input type="radio" name="result" id="r3" value="r3" class="bet-option__input" />
+															<label for="r3" class="bet-option__label"
+																><span class="bet-option__label-info">Вашингтон Визардс</span><span class="bet-option__label-coefficient">2.04</span></label
+															>
+														</div>
+													</div>
+												</details>
+												<details class="tabs-bets__spoller" data-open>
+													<summary class="tabs-bets__spoller-title">
+														Фора очок
+														<span class="_icon-daw-bottom"></span>
+													</summary>
+													<div class="tabs-bets__spoller-body tabs-bets__spoller-body--row">
+														<div class="bet-option">
+															<input type="radio" name="fora" id="f1" value="f1" class="bet-option__input" checked />
+															<label for="f1" class="bet-option__label"
+																><span class="bet-option__label-info">Сакраменто Кінгс (-11)</span><span class="bet-option__label-coefficient">1.73</span></label
+															>
+														</div>
+
+														<div class="bet-option">
+															<input type="radio" name="fora" id="f2" value="f2" class="bet-option__input" />
+															<label for="f2" class="bet-option__label"
+																><span class="bet-option__label-info">Вашингтон Візардз (11)</span><span class="bet-option__label-coefficient">2.22</span></label
+															>
+														</div>
+													</div>
+												</details>
+												<details class="tabs-bets__spoller" data-open>
+													<summary class="tabs-bets__spoller-title">
+														Тотал очок
+														<span class="_icon-daw-bottom"></span>
+													</summary>
+													<div class="tabs-bets__spoller-body tabs-bets__spoller-body--row">
+														<div class="bet-option">
+															<input type="radio" name="total" id="t1" value="t1" class="bet-option__input" />
+															<label for="t1" class="bet-option__label"
+																><span class="bet-option__label-info">Більше (234.5)</span><span class="bet-option__label-coefficient">1.73</span></label
+															>
+														</div>
+
+														<div class="bet-option">
+															<input type="radio" name="total" id="t2" value="t2" class="bet-option__input" checked />
+															<label for="t2" class="bet-option__label"
+																><span class="bet-option__label-info"> Менше (234.5)</span><span class="bet-option__label-coefficient">2.22</span></label
+															>
+														</div>
+													</div>
+												</details>
+												<details class="tabs-bets__spoller" data-open>
+													<summary class="tabs-bets__spoller-title">
+														Тотал очок Team 2
+														<span class="_icon-daw-bottom"></span>
+													</summary>
+													<div class="tabs-bets__spoller-body tabs-bets__spoller-body--row">
+														<div class="bet-option">
+															<input type="radio" name="totalTwo" id="tt1" value="tt1" class="bet-option__input" />
+															<label for="tt1" class="bet-option__label"
+																><span class="bet-option__label-info">Більше (112.5)</span><span class="bet-option__label-coefficient">1.73</span></label
+															>
+														</div>
+
+														<div class="bet-option">
+															<input type="radio" name="totalTwo" id="tt2" value="tt2" class="bet-option__input" />
+															<label for="tt2" class="bet-option__label"
+																><span class="bet-option__label-info">Менше (112.5)</span><span class="bet-option__label-coefficient">2.22</span></label
+															>
+														</div>
+													</div>
+												</details>
+												<details class="tabs-bets__spoller" data-open>
+													<summary class="tabs-bets__spoller-title">
+														1 половина. Результат (3 результати)
+														<span class="_icon-daw-bottom"></span>
+													</summary>
+													<div class="tabs-bets__spoller-body tabs-bets__spoller-body--row">
+														<div class="bet-option">
+															<input type="radio" name="half" id="r1" value="r1" class="bet-option__input" />
+															<label for="r1" class="bet-option__label"
+																><span class="bet-option__label-info">Сакраменто Кінгс</span><span class="bet-option__label-coefficient">1.25</span></label
+															>
+														</div>
+														<div class="bet-option">
+															<input type="radio" name="half" id="r2" value="r2" class="bet-option__input" />
+															<label for="r2" class="bet-option__label"
+																><span class="bet-option__label-info">Нічия</span><span class="bet-option__label-coefficient">15.00</span></label
+															>
+														</div>
+														<div class="bet-option">
+															<input type="radio" name="half" id="r3" value="r3" class="bet-option__input" />
+															<label for="r3" class="bet-option__label"
+																><span class="bet-option__label-info">Вашингтон Визардс</span><span class="bet-option__label-coefficient">3.66</span></label
+															>
+														</div>
+													</div>
+												</details>
+											</div>
+										</div>
+										<div class="tabs-bet__body"></div>
+										<div class="tabs-bet__body"></div>
+										<div class="tabs-bet__body"></div>
+										<div class="tabs-bet__body"></div>
+										<div class="tabs-bet__body"></div>
+										<div class="tabs-bet__body"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
