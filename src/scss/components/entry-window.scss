@@ -1,138 +1,147 @@
 .entry-window {
-    padding: toRem(30);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    &__wrapper {
-        width: 100%;
-        max-width: toRem(760);
+	padding: toRem(30);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&__wrapper {
+		width: 100%;
+		max-width: toRem(760);
 
-        background: var(--bg-primary);
-        border-radius: 60px;
-        overflow: hidden;
-        @media (min-width: $mobile) {
-            display: flex;
-        }
-    }
-    &__image {
-        display: none;
-        @media (min-width: $mobile) {
-            display: block;
-            flex: 0 0 50%;
-            position: relative;
-            border-radius: 60px;
-            overflow: hidden;
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-    &__content {
-        padding: toRem(50) toRem(20);
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        @media (min-width: $mobile) {
-            flex: 0 0 50%;
-        }
-    }
-    &__close-btn {
-        position: absolute;
-        top: toRem(30);
-        right: toRem(30);
-        font-size: toRem(18);
-        color: var(--text-secondary);
-    }
-    &__logo {
-        max-width: toRem(218);
-        width: 100%;
-        text-align: center;
-        align-self: center;
-        &:not(:last-child) {
-            margin-bottom: toRem(30);
-        }
-        img {
-            max-width: 100%;
-        }
-    }
-    &__buttons {
-        align-self: center;
-        &:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
-        .tabs__title {
-            padding: toRem(22) toRem(35);
-        }
-    }
-    &__services {
-        align-self: center;
-        &:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
-    }
-    &__text {
-        color: var(--text-secondary);
-        text-align: center;
-        font-weight: 800;
-        &:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
-    }
-    &__form {
-    }
+		background: var(--bg-primary);
+		border-radius: 60px;
+		overflow: hidden;
+		@media (min-width: $mobile) {
+			display: flex;
+		}
+	}
+	&__image {
+		display: none;
+		@media (min-width: $mobile) {
+			display: block;
+			flex: 0 0 50%;
+			position: relative;
+			border-radius: 60px;
+			overflow: hidden;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__content {
+		padding: toRem(50) toRem(20);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $mobile) {
+			flex: 0 0 50%;
+		}
+	}
+	&__close-btn {
+		position: absolute;
+		top: toRem(30);
+		right: toRem(30);
+		font-size: toRem(18);
+		color: var(--text-secondary);
+	}
+	&__logo {
+		max-width: toRem(218);
+		width: 100%;
+		text-align: center;
+		align-self: center;
+		transition: transform 0.3s;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		&:active {
+			transform: scale(1.05);
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	&__buttons {
+		align-self: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		.tabs__title {
+			padding: toRem(22) toRem(35);
+		}
+	}
+	&__services {
+		align-self: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__text {
+		color: var(--text-secondary);
+		text-align: center;
+		font-weight: 800;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__form {
+	}
 }
 .form-registry {
-    &__inputs {
-        &:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
-    }
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: toRem(10);
-        }
-    }
-    &__link {
-        text-decoration: underline;
-        transition: color 0.3s;
-        &:not(:last-child) {
-            margin-bottom: toRem(30);
-        }
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--text-secondary);
-            }
-        }
-    }
-    &__text {
-        font-size: toRem(10);
-        line-height: 1.5;
-        &:not(:last-child) {
-            margin-bottom: toRem(30);
-        }
-    }
-    &__button {
-        &:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
-    }
-    &__agreement {
-    }
+	&__inputs {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__link {
+		text-decoration: underline;
+		transition: color 0.3s;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--text-secondary);
+			}
+		}
+	}
+	&__text {
+		font-size: toRem(10);
+		line-height: 1.5;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&__button {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__agreement {
+	}
 }
 .item-registry-form {
-    position: relative;
-    &__input {
-    }
-    &__icon {
-        position: absolute;
-        top: 50%;
-        right: toRem(15);
-        font-size: toRem(15);
-        transform: translate(0, -50%);
-    }
+	position: relative;
+	&__input {
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: toRem(15);
+		font-size: toRem(15);
+		transform: translate(0, -50%);
+	}
 }
